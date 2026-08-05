@@ -47,37 +47,27 @@ The processor is divided into five major stages:
 # 📂 Repository Structure
 
 ```
-RV32I-Single-Cycle-RISC-V-Processor
+RV32I-Single-Cycle-RISC-V-Processor/
 │
-├── RTL/
-│   ├── Fetch/
-│   ├── Decode/
-│   ├── Execute/
-│   ├── Memory/
-│   ├── WriteBack/
-│   └── Top/
+├── RTL/                 # All Verilog RTL modules
 │
-├── TB/
-│   ├── RISCV_SC_all37_tb.v
-│   └── ...
+├── TB/                  # Testbenches
 │
-├── Programs/
-│   ├── program_all37.mem
-│   └── ...
+├── Programs/            # .mem program files
 │
-├── Documentation/
-│   ├── Design_Report.pdf
-│   └── Project_Presentation.pdf
+├── Simulation/          # QuestaSim outputs (optional)
 │
-├── Vivado/
-│   ├── Synthesis_Report.pdf
-│   ├── Timing_Report.pdf
-│   └── Implementation_Report.pdf
+├── Documentation/       # Report & Presentation
 │
-├── Images/
+├── Synthesis/           # Vivado synthesis reports
 │
+├── Implementation/      # Vivado implementation reports
+│
+├── Images/              # README images
+│
+├── LICENSE
 ├── README.md
-└── LICENSE
+└── .gitignore
 ```
 
 ---
