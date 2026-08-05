@@ -1,0 +1,13 @@
+List of CLB Tiles
+CLEM_X4Y120
+CLEL_R_X4Y120
+CLEL_L_X42Y199
+CLEL_L_X34Y22
+CLEM_X12Y205
+CLEL_L_X11Y192
+CLEL_R_X11Y192
+
+List of Congested Nets
+u_execute_top/u_alu/IEUAdr[0]
+u_data_memory/mem_reg_n_0_[836][0]
+

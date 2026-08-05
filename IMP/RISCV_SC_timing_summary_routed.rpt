@@ -1,0 +1,1288 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version      : Vivado v.2025.2 (win64) Build 6299465 Fri Nov 14 19:35:11 GMT 2025
+| Date              : Wed Aug  5 00:27:16 2026
+| Host              : LAPTOP-OJRLD0H9 running 64-bit major release  (build 9200)
+| Command           : report_timing_summary -max_paths 10 -routable_nets -report_unconstrained -file RISCV_SC_timing_summary_routed.rpt -pb RISCV_SC_timing_summary_routed.pb -rpx RISCV_SC_timing_summary_routed.rpx -warn_on_violation
+| Design            : RISCV_SC
+| Device            : xczu5ev-sfvc784
+| Speed File        : -1LV  PRODUCTION 1.30 05-15-2022
+| Design State      : Routed
+| Temperature Grade : I
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Timing Summary Report
+
+------------------------------------------------------------------------------------------------
+| Timer Settings
+| --------------
+------------------------------------------------------------------------------------------------
+
+  Enable Multi Corner Analysis               :  Yes
+  Enable Pessimism Removal                   :  Yes
+  Pessimism Removal Resolution               :  Nearest Common Node
+  Enable Input Delay Default Clock           :  No
+  Enable Preset / Clear Arcs                 :  No
+  Disable Flight Delays                      :  No
+  Ignore I/O Paths                           :  No
+  Timing Early Launch at Borrowing Latches   :  No
+  Borrow Time for Max Delay Exceptions       :  Yes
+  Merge Timing Exceptions                    :  Yes
+  Inter-SLR Compensation                     :  Conservative
+
+  Corner  Analyze    Analyze    
+  Name    Max Paths  Min Paths  
+  ------  ---------  ---------  
+  Slow    Yes        Yes        
+  Fast    Yes        Yes        
+
+
+------------------------------------------------------------------------------------------------
+| Report Methodology
+| ------------------
+------------------------------------------------------------------------------------------------
+
+Rule       Severity          Description                  Violations  
+---------  ----------------  ---------------------------  ----------  
+TIMING-17  Critical Warning  Non-clocked sequential cell  1000        
+
+Note: This report is based on the most recent report_methodology run and may not be up-to-date. Run report_methodology on the current design for the latest report.
+
+
+
+check_timing report
+
+Table of Contents
+-----------------
+1. checking no_clock (16896)
+2. checking constant_clock (0)
+3. checking pulse_width_clock (0)
+4. checking unconstrained_internal_endpoints (33792)
+5. checking no_input_delay (1)
+6. checking no_output_delay (157)
+7. checking multiple_clock (0)
+8. checking generated_clocks (0)
+9. checking loops (0)
+10. checking partial_input_delay (0)
+11. checking partial_output_delay (0)
+12. checking latch_loops (0)
+
+1. checking no_clock (16896)
+----------------------------
+ There are 16896 register/latch pins with no clock driven by root clock pin: clk (HIGH)
+
+
+2. checking constant_clock (0)
+------------------------------
+ There are 0 register/latch pins with constant_clock.
+
+
+3. checking pulse_width_clock (0)
+---------------------------------
+ There are 0 register/latch pins which need pulse_width check
+
+
+4. checking unconstrained_internal_endpoints (33792)
+----------------------------------------------------
+ There are 33792 pins that are not constrained for maximum delay. (HIGH)
+
+ There are 0 pins that are not constrained for maximum delay due to constant clock.
+
+
+5. checking no_input_delay (1)
+------------------------------
+ There is 1 input port with no input delay specified. (HIGH)
+
+ There are 0 input ports with no input delay but user has a false path constraint.
+
+
+6. checking no_output_delay (157)
+---------------------------------
+ There are 157 ports with no output delay specified. (HIGH)
+
+ There are 0 ports with no output delay but user has a false path constraint
+
+ There are 0 ports with no output delay but with a timing clock defined on it or propagating through it
+
+
+7. checking multiple_clock (0)
+------------------------------
+ There are 0 register/latch pins with multiple clocks.
+
+
+8. checking generated_clocks (0)
+--------------------------------
+ There are 0 generated clocks that are not connected to a clock source.
+
+
+9. checking loops (0)
+---------------------
+ There are 0 combinational loops in the design.
+
+
+10. checking partial_input_delay (0)
+------------------------------------
+ There are 0 input ports with partial input delay specified.
+
+
+11. checking partial_output_delay (0)
+-------------------------------------
+ There are 0 ports with partial output delay specified.
+
+
+12. checking latch_loops (0)
+----------------------------
+ There are 0 combinational latch loops in the design through latch input
+
+
+
+------------------------------------------------------------------------------------------------
+| Design Timing Summary
+| ---------------------
+------------------------------------------------------------------------------------------------
+
+    WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
+    -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
+        inf        0.000                      0                33917          inf        0.000                      0                33917           NA           NA                      NA                    NA  
+
+
+There are no user specified timing constraints.
+
+
+------------------------------------------------------------------------------------------------
+| Clock Summary
+| -------------
+------------------------------------------------------------------------------------------------
+
+
+------------------------------------------------------------------------------------------------
+| Intra Clock Table
+| -----------------
+------------------------------------------------------------------------------------------------
+
+Clock             WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
+-----             -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
+
+
+------------------------------------------------------------------------------------------------
+| Inter Clock Table
+| -----------------
+------------------------------------------------------------------------------------------------
+
+From Clock    To Clock          WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints  
+----------    --------          -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------  
+
+
+------------------------------------------------------------------------------------------------
+| Other Path Groups Table
+| -----------------------
+------------------------------------------------------------------------------------------------
+
+Path Group    From Clock    To Clock          WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints  
+----------    ----------    --------          -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------  
+
+
+------------------------------------------------------------------------------------------------
+| User Ignored Path Table
+| -----------------------
+------------------------------------------------------------------------------------------------
+
+Path Group    From Clock    To Clock    
+----------    ----------    --------    
+
+
+------------------------------------------------------------------------------------------------
+| Unconstrained Path Table
+| ------------------------
+------------------------------------------------------------------------------------------------
+
+Path Group    From Clock    To Clock    
+----------    ----------    --------    
+(none)                                    
+
+
+------------------------------------------------------------------------------------------------
+| Timing Details
+| --------------
+------------------------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------------
+Path Group:  (none)
+From Clock:  
+  To Clock:  
+
+Max Delay         33917 Endpoints
+Min Delay         33917 Endpoints
+--------------------------------------------------------------------------------------
+
+
+Max Delay Paths
+--------------------------------------------------------------------------------------
+Slack:                    inf
+  Source:                 u_fetch_unit_top/u_pc/pc_reg[5]/C
+                            (rising edge-triggered cell FDRE)
+  Destination:            Result_out[17]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        83.359ns  (logic 3.922ns (4.705%)  route 79.437ns (95.295%))
+  Logic Levels:           22  (CARRY8=1 FDRE=1 LUT3=1 LUT4=2 LUT5=2 LUT6=7 MUXF7=5 MUXF8=2 OBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X23Y228        FDRE                         0.000     0.000 r  u_fetch_unit_top/u_pc/pc_reg[5]/C
+    SLICE_X23Y228        FDRE (Prop_CFF2_SLICEL_C_Q)
+                                                      0.136     0.136 r  u_fetch_unit_top/u_pc/pc_reg[5]/Q
+                         net (fo=29, routed)          1.696     1.832    u_fetch_unit_top/u_instruction_memory/addr[5]
+    SLICE_X13Y228        LUT6 (Prop_C6LUT_SLICEM_I5_O)
+                                                      0.149     1.981 r  u_fetch_unit_top/u_instruction_memory/instr[23]_INST_0/O
+                         net (fo=227, routed)         2.561     4.542    u_decode_top/u_register_file/RA2[3]
+    SLICE_X10Y238        LUT4 (Prop_H6LUT_SLICEM_I1_O)
+                                                      0.174     4.716 r  u_decode_top/u_register_file/rs2_data[25]_INST_0_i_7/O
+                         net (fo=1, routed)           0.020     4.736    u_decode_top/u_register_file/rs2_data[25]_INST_0_i_7_n_0
+    SLICE_X10Y238        MUXF7 (Prop_F7MUX_GH_SLICEM_I0_O)
+                                                      0.125     4.861 r  u_decode_top/u_register_file/rs2_data[25]_INST_0_i_2/O
+                         net (fo=1, routed)           0.407     5.268    u_decode_top/u_register_file/rs2_data[25]_INST_0_i_2_n_0
+    SLICE_X11Y238        LUT6 (Prop_H6LUT_SLICEL_I1_O)
+                                                      0.173     5.441 r  u_decode_top/u_register_file/rs2_data[25]_INST_0/O
+                         net (fo=1425, routed)       10.048    15.489    u_execute_top/u_srcB_mux/rs2_data[25]
+    SLICE_X15Y231        LUT3 (Prop_G5LUT_SLICEL_I1_O)
+                                                      0.110    15.599 r  u_execute_top/u_srcB_mux/SrcB[25]_INST_0/O
+                         net (fo=8, routed)           0.520    16.120    u_execute_top/u_alu/SrcB[25]
+    SLICE_X18Y233        LUT4 (Prop_E6LUT_SLICEM_I2_O)
+                                                      0.215    16.335 r  u_execute_top/u_alu/IEUAdr[0]_INST_0_i_40/O
+                         net (fo=1, routed)           0.018    16.353    u_execute_top/u_alu/IEUAdr[0]_INST_0_i_40_n_0
+    SLICE_X18Y233        CARRY8 (Prop_CARRY8_SLICEM_S[4]_CO[7])
+                                                      0.294    16.647 r  u_execute_top/u_alu/IEUAdr[0]_INST_0_i_8/CO[7]
+                         net (fo=1, routed)           0.513    17.160    u_execute_top/u_alu/data3
+    SLICE_X17Y230        LUT6 (Prop_H6LUT_SLICEM_I0_O)
+                                                      0.218    17.378 r  u_execute_top/u_alu/IEUAdr[0]_INST_0_i_5/O
+                         net (fo=1, routed)           0.135    17.513    u_execute_top/u_alu/IEUAdr[0]_INST_0_i_5_n_0
+    SLICE_X17Y230        LUT5 (Prop_D6LUT_SLICEM_I4_O)
+                                                      0.213    17.726 r  u_execute_top/u_alu/IEUAdr[0]_INST_0_i_1/O
+                         net (fo=1, routed)           0.032    17.758    u_execute_top/u_alu/IEUAdr[0]_INST_0_i_1_n_0
+    SLICE_X17Y230        MUXF7 (Prop_F7MUX_CD_SLICEM_I0_O)
+                                                      0.132    17.890 r  u_execute_top/u_alu/IEUAdr[0]_INST_0/O
+                         net (fo=31601, routed)      54.302    72.192    u_data_memory/address[0]
+    SLICE_X43Y22         LUT6 (Prop_H6LUT_SLICEM_I4_O)
+                                                      0.096    72.288 r  u_data_memory/read_data[17]_INST_0_i_852/O
+                         net (fo=1, routed)           0.020    72.308    u_data_memory/read_data[17]_INST_0_i_852_n_0
+    SLICE_X43Y22         MUXF7 (Prop_F7MUX_GH_SLICEM_I0_O)
+                                                      0.117    72.425 r  u_data_memory/read_data[17]_INST_0_i_392/O
+                         net (fo=1, routed)           0.000    72.425    u_data_memory/read_data[17]_INST_0_i_392_n_0
+    SLICE_X43Y22         MUXF8 (Prop_F8MUX_TOP_SLICEM_I0_O)
+                                                      0.038    72.463 r  u_data_memory/read_data[17]_INST_0_i_162/O
+                         net (fo=1, routed)           0.476    72.939    u_data_memory/read_data[17]_INST_0_i_162_n_0
+    SLICE_X40Y16         LUT6 (Prop_C6LUT_SLICEM_I3_O)
+                                                      0.247    73.186 r  u_data_memory/read_data[17]_INST_0_i_53/O
+                         net (fo=1, routed)           0.029    73.215    u_data_memory/read_data[17]_INST_0_i_53_n_0
+    SLICE_X40Y16         MUXF7 (Prop_F7MUX_CD_SLICEM_I1_O)
+                                                      0.124    73.339 r  u_data_memory/read_data[17]_INST_0_i_24/O
+                         net (fo=1, routed)           0.000    73.339    u_data_memory/read_data[17]_INST_0_i_24_n_0
+    SLICE_X40Y16         MUXF8 (Prop_F8MUX_BOT_SLICEM_I0_O)
+                                                      0.043    73.382 r  u_data_memory/read_data[17]_INST_0_i_10/O
+                         net (fo=1, routed)           1.696    75.078    u_data_memory/read_data[17]_INST_0_i_10_n_0
+    SLICE_X33Y120        LUT6 (Prop_C6LUT_SLICEL_I3_O)
+                                                      0.092    75.170 r  u_data_memory/read_data[17]_INST_0_i_3/O
+                         net (fo=1, routed)           0.015    75.185    u_data_memory/read_data[17]_INST_0_i_3_n_0
+    SLICE_X33Y120        MUXF7 (Prop_F7MUX_CD_SLICEL_I1_O)
+                                                      0.119    75.304 r  u_data_memory/read_data[17]_INST_0_i_1/O
+                         net (fo=1, routed)           2.305    77.609    u_data_memory/read_data[17]_INST_0_i_1_n_0
+    SLICE_X23Y217        LUT6 (Prop_H6LUT_SLICEL_I4_O)
+                                                      0.060    77.669 r  u_data_memory/read_data[17]_INST_0/O
+                         net (fo=2, routed)           1.028    78.697    u_result_mux/ReadData[17]
+    SLICE_X22Y230        LUT5 (Prop_G6LUT_SLICEL_I0_O)
+                                                      0.059    78.756 r  u_result_mux/Result[17]_INST_0/O
+                         net (fo=16, routed)          3.615    82.371    Result_out_OBUF[17]
+    AD1                  OBUF (Prop_OUTBUF_HPIOB_S_I_O)
+                                                      0.988    83.359 r  Result_out_OBUF[17]_inst/O
+                         net (fo=0)                   0.000    83.359    Result_out[17]
+    AD1                                                               r  Result_out[17] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 u_fetch_unit_top/u_pc/pc_reg[5]/C
+                            (rising edge-triggered cell FDRE)
+  Destination:            Result_out[10]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        83.356ns  (logic 4.271ns (5.123%)  route 79.086ns (94.877%))
+  Logic Levels:           22  (CARRY8=1 FDRE=1 LUT3=1 LUT4=2 LUT5=3 LUT6=6 MUXF7=5 MUXF8=2 OBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X23Y228        FDRE                         0.000     0.000 r  u_fetch_unit_top/u_pc/pc_reg[5]/C
+    SLICE_X23Y228        FDRE (Prop_CFF2_SLICEL_C_Q)
+                                                      0.136     0.136 r  u_fetch_unit_top/u_pc/pc_reg[5]/Q
+                         net (fo=29, routed)          1.696     1.832    u_fetch_unit_top/u_instruction_memory/addr[5]
+    SLICE_X13Y228        LUT6 (Prop_C6LUT_SLICEM_I5_O)
+                                                      0.149     1.981 r  u_fetch_unit_top/u_instruction_memory/instr[23]_INST_0/O
+                         net (fo=227, routed)         2.561     4.542    u_decode_top/u_register_file/RA2[3]
+    SLICE_X10Y238        LUT4 (Prop_H6LUT_SLICEM_I1_O)
+                                                      0.174     4.716 r  u_decode_top/u_register_file/rs2_data[25]_INST_0_i_7/O
+                         net (fo=1, routed)           0.020     4.736    u_decode_top/u_register_file/rs2_data[25]_INST_0_i_7_n_0
+    SLICE_X10Y238        MUXF7 (Prop_F7MUX_GH_SLICEM_I0_O)
+                                                      0.125     4.861 r  u_decode_top/u_register_file/rs2_data[25]_INST_0_i_2/O
+                         net (fo=1, routed)           0.407     5.268    u_decode_top/u_register_file/rs2_data[25]_INST_0_i_2_n_0
+    SLICE_X11Y238        LUT6 (Prop_H6LUT_SLICEL_I1_O)
+                                                      0.173     5.441 r  u_decode_top/u_register_file/rs2_data[25]_INST_0/O
+                         net (fo=1425, routed)       10.048    15.489    u_execute_top/u_srcB_mux/rs2_data[25]
+    SLICE_X15Y231        LUT3 (Prop_G5LUT_SLICEL_I1_O)
+                                                      0.110    15.599 r  u_execute_top/u_srcB_mux/SrcB[25]_INST_0/O
+                         net (fo=8, routed)           0.520    16.120    u_execute_top/u_alu/SrcB[25]
+    SLICE_X18Y233        LUT4 (Prop_E6LUT_SLICEM_I2_O)
+                                                      0.215    16.335 r  u_execute_top/u_alu/IEUAdr[0]_INST_0_i_40/O
+                         net (fo=1, routed)           0.018    16.353    u_execute_top/u_alu/IEUAdr[0]_INST_0_i_40_n_0
+    SLICE_X18Y233        CARRY8 (Prop_CARRY8_SLICEM_S[4]_CO[7])
+                                                      0.294    16.647 r  u_execute_top/u_alu/IEUAdr[0]_INST_0_i_8/CO[7]
+                         net (fo=1, routed)           0.513    17.160    u_execute_top/u_alu/data3
+    SLICE_X17Y230        LUT6 (Prop_H6LUT_SLICEM_I0_O)
+                                                      0.218    17.378 r  u_execute_top/u_alu/IEUAdr[0]_INST_0_i_5/O
+                         net (fo=1, routed)           0.135    17.513    u_execute_top/u_alu/IEUAdr[0]_INST_0_i_5_n_0
+    SLICE_X17Y230        LUT5 (Prop_D6LUT_SLICEM_I4_O)
+                                                      0.213    17.726 r  u_execute_top/u_alu/IEUAdr[0]_INST_0_i_1/O
+                         net (fo=1, routed)           0.032    17.758    u_execute_top/u_alu/IEUAdr[0]_INST_0_i_1_n_0
+    SLICE_X17Y230        MUXF7 (Prop_F7MUX_CD_SLICEM_I0_O)
+                                                      0.132    17.890 r  u_execute_top/u_alu/IEUAdr[0]_INST_0/O
+                         net (fo=31601, routed)      54.064    71.954    u_data_memory/address[0]
+    SLICE_X44Y22         LUT6 (Prop_B6LUT_SLICEL_I4_O)
+                                                      0.216    72.170 r  u_data_memory/read_data[10]_INST_0_i_854/O
+                         net (fo=1, routed)           0.013    72.183    u_data_memory/read_data[10]_INST_0_i_854_n_0
+    SLICE_X44Y22         MUXF7 (Prop_F7MUX_AB_SLICEL_I0_O)
+                                                      0.110    72.293 r  u_data_memory/read_data[10]_INST_0_i_393/O
+                         net (fo=1, routed)           0.000    72.293    u_data_memory/read_data[10]_INST_0_i_393_n_0
+    SLICE_X44Y22         MUXF8 (Prop_F8MUX_BOT_SLICEL_I1_O)
+                                                      0.035    72.328 r  u_data_memory/read_data[10]_INST_0_i_162/O
+                         net (fo=1, routed)           0.661    72.989    u_data_memory/read_data[10]_INST_0_i_162_n_0
+    SLICE_X42Y15         LUT6 (Prop_C6LUT_SLICEL_I3_O)
+                                                      0.092    73.081 r  u_data_memory/read_data[10]_INST_0_i_53/O
+                         net (fo=1, routed)           0.015    73.096    u_data_memory/read_data[10]_INST_0_i_53_n_0
+    SLICE_X42Y15         MUXF7 (Prop_F7MUX_CD_SLICEL_I1_O)
+                                                      0.111    73.207 r  u_data_memory/read_data[10]_INST_0_i_24/O
+                         net (fo=1, routed)           0.000    73.207    u_data_memory/read_data[10]_INST_0_i_24_n_0
+    SLICE_X42Y15         MUXF8 (Prop_F8MUX_BOT_SLICEL_I0_O)
+                                                      0.035    73.242 r  u_data_memory/read_data[10]_INST_0_i_10/O
+                         net (fo=1, routed)           1.558    74.800    u_data_memory/read_data[10]_INST_0_i_10_n_0
+    SLICE_X33Y125        LUT6 (Prop_G6LUT_SLICEL_I3_O)
+                                                      0.172    74.972 r  u_data_memory/read_data[10]_INST_0_i_3/O
+                         net (fo=1, routed)           0.013    74.985    u_data_memory/read_data[10]_INST_0_i_3_n_0
+    SLICE_X33Y125        MUXF7 (Prop_F7MUX_GH_SLICEL_I1_O)
+                                                      0.118    75.103 r  u_data_memory/read_data[10]_INST_0_i_1/O
+                         net (fo=1, routed)           2.276    77.379    u_data_memory/raw_half[10]
+    SLICE_X23Y180        LUT5 (Prop_G6LUT_SLICEL_I3_O)
+                                                      0.254    77.633 r  u_data_memory/read_data[10]_INST_0/O
+                         net (fo=2, routed)           0.794    78.427    u_result_mux/ReadData[10]
+    SLICE_X23Y228        LUT5 (Prop_H6LUT_SLICEL_I0_O)
+                                                      0.173    78.600 r  u_result_mux/Result[10]_INST_0/O
+                         net (fo=16, routed)          3.741    82.341    Result_out_OBUF[10]
+    AG4                  OBUF (Prop_OUTBUF_HPIOB_M_I_O)
+                                                      1.016    83.356 r  Result_out_OBUF[10]_inst/O
+                         net (fo=0)                   0.000    83.356    Result_out[10]
+    AG4                                                               r  Result_out[10] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 u_fetch_unit_top/u_pc/pc_reg[5]/C
+                            (rising edge-triggered cell FDRE)
+  Destination:            Result_out[3]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        83.240ns  (logic 4.091ns (4.914%)  route 79.149ns (95.086%))
+  Logic Levels:           22  (CARRY8=1 FDRE=1 LUT3=1 LUT4=3 LUT5=2 LUT6=6 MUXF7=5 MUXF8=2 OBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X23Y228        FDRE                         0.000     0.000 r  u_fetch_unit_top/u_pc/pc_reg[5]/C
+    SLICE_X23Y228        FDRE (Prop_CFF2_SLICEL_C_Q)
+                                                      0.136     0.136 r  u_fetch_unit_top/u_pc/pc_reg[5]/Q
+                         net (fo=29, routed)          1.696     1.832    u_fetch_unit_top/u_instruction_memory/addr[5]
+    SLICE_X13Y228        LUT6 (Prop_C6LUT_SLICEM_I5_O)
+                                                      0.149     1.981 r  u_fetch_unit_top/u_instruction_memory/instr[23]_INST_0/O
+                         net (fo=227, routed)         2.561     4.542    u_decode_top/u_register_file/RA2[3]
+    SLICE_X10Y238        LUT4 (Prop_H6LUT_SLICEM_I1_O)
+                                                      0.174     4.716 r  u_decode_top/u_register_file/rs2_data[25]_INST_0_i_7/O
+                         net (fo=1, routed)           0.020     4.736    u_decode_top/u_register_file/rs2_data[25]_INST_0_i_7_n_0
+    SLICE_X10Y238        MUXF7 (Prop_F7MUX_GH_SLICEM_I0_O)
+                                                      0.125     4.861 r  u_decode_top/u_register_file/rs2_data[25]_INST_0_i_2/O
+                         net (fo=1, routed)           0.407     5.268    u_decode_top/u_register_file/rs2_data[25]_INST_0_i_2_n_0
+    SLICE_X11Y238        LUT6 (Prop_H6LUT_SLICEL_I1_O)
+                                                      0.173     5.441 r  u_decode_top/u_register_file/rs2_data[25]_INST_0/O
+                         net (fo=1425, routed)       10.048    15.489    u_execute_top/u_srcB_mux/rs2_data[25]
+    SLICE_X15Y231        LUT3 (Prop_G5LUT_SLICEL_I1_O)
+                                                      0.110    15.599 r  u_execute_top/u_srcB_mux/SrcB[25]_INST_0/O
+                         net (fo=8, routed)           0.520    16.120    u_execute_top/u_alu/SrcB[25]
+    SLICE_X18Y233        LUT4 (Prop_E6LUT_SLICEM_I2_O)
+                                                      0.215    16.335 r  u_execute_top/u_alu/IEUAdr[0]_INST_0_i_40/O
+                         net (fo=1, routed)           0.018    16.353    u_execute_top/u_alu/IEUAdr[0]_INST_0_i_40_n_0
+    SLICE_X18Y233        CARRY8 (Prop_CARRY8_SLICEM_S[4]_CO[7])
+                                                      0.294    16.647 r  u_execute_top/u_alu/IEUAdr[0]_INST_0_i_8/CO[7]
+                         net (fo=1, routed)           0.513    17.160    u_execute_top/u_alu/data3
+    SLICE_X17Y230        LUT6 (Prop_H6LUT_SLICEM_I0_O)
+                                                      0.218    17.378 r  u_execute_top/u_alu/IEUAdr[0]_INST_0_i_5/O
+                         net (fo=1, routed)           0.135    17.513    u_execute_top/u_alu/IEUAdr[0]_INST_0_i_5_n_0
+    SLICE_X17Y230        LUT5 (Prop_D6LUT_SLICEM_I4_O)
+                                                      0.213    17.726 r  u_execute_top/u_alu/IEUAdr[0]_INST_0_i_1/O
+                         net (fo=1, routed)           0.032    17.758    u_execute_top/u_alu/IEUAdr[0]_INST_0_i_1_n_0
+    SLICE_X17Y230        MUXF7 (Prop_F7MUX_CD_SLICEM_I0_O)
+                                                      0.132    17.890 r  u_execute_top/u_alu/IEUAdr[0]_INST_0/O
+                         net (fo=31601, routed)      55.560    73.450    u_data_memory/address[0]
+    SLICE_X45Y16         LUT6 (Prop_H6LUT_SLICEM_I4_O)
+                                                      0.096    73.546 r  u_data_memory/read_data[3]_INST_0_i_852/O
+                         net (fo=1, routed)           0.020    73.566    u_data_memory/read_data[3]_INST_0_i_852_n_0
+    SLICE_X45Y16         MUXF7 (Prop_F7MUX_GH_SLICEM_I0_O)
+                                                      0.117    73.683 r  u_data_memory/read_data[3]_INST_0_i_392/O
+                         net (fo=1, routed)           0.000    73.683    u_data_memory/read_data[3]_INST_0_i_392_n_0
+    SLICE_X45Y16         MUXF8 (Prop_F8MUX_TOP_SLICEM_I0_O)
+                                                      0.038    73.721 r  u_data_memory/read_data[3]_INST_0_i_162/O
+                         net (fo=1, routed)           0.658    74.379    u_data_memory/read_data[3]_INST_0_i_162_n_0
+    SLICE_X43Y15         LUT6 (Prop_G6LUT_SLICEM_I3_O)
+                                                      0.253    74.632 r  u_data_memory/read_data[3]_INST_0_i_53/O
+                         net (fo=1, routed)           0.021    74.653    u_data_memory/read_data[3]_INST_0_i_53_n_0
+    SLICE_X43Y15         MUXF7 (Prop_F7MUX_GH_SLICEM_I1_O)
+                                                      0.119    74.772 r  u_data_memory/read_data[3]_INST_0_i_24/O
+                         net (fo=1, routed)           0.000    74.772    u_data_memory/read_data[3]_INST_0_i_24_n_0
+    SLICE_X43Y15         MUXF8 (Prop_F8MUX_TOP_SLICEM_I0_O)
+                                                      0.038    74.810 r  u_data_memory/read_data[3]_INST_0_i_10/O
+                         net (fo=1, routed)           1.609    76.419    u_data_memory/read_data[3]_INST_0_i_10_n_0
+    SLICE_X32Y123        LUT6 (Prop_G6LUT_SLICEM_I3_O)
+                                                      0.093    76.512 r  u_data_memory/read_data[3]_INST_0_i_3/O
+                         net (fo=1, routed)           0.021    76.533    u_data_memory/read_data[3]_INST_0_i_3_n_0
+    SLICE_X32Y123        MUXF7 (Prop_F7MUX_GH_SLICEM_I1_O)
+                                                      0.127    76.660 r  u_data_memory/read_data[3]_INST_0_i_1/O
+                         net (fo=1, routed)           1.478    78.138    u_data_memory/read_data[3]_INST_0_i_1_n_0
+    SLICE_X23Y196        LUT4 (Prop_H5LUT_SLICEL_I2_O)
+                                                      0.107    78.245 r  u_data_memory/read_data[3]_INST_0/O
+                         net (fo=2, routed)           0.238    78.483    u_result_mux/ReadData[3]
+    SLICE_X23Y197        LUT5 (Prop_G6LUT_SLICEL_I0_O)
+                                                      0.151    78.634 r  u_result_mux/Result[3]_INST_0/O
+                         net (fo=16, routed)          3.593    82.227    Result_out_OBUF[3]
+    AH1                  OBUF (Prop_OUTBUF_HPIOB_S_I_O)
+                                                      1.013    83.240 r  Result_out_OBUF[3]_inst/O
+                         net (fo=0)                   0.000    83.240    Result_out[3]
+    AH1                                                               r  Result_out[3] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 u_fetch_unit_top/u_pc/pc_reg[5]/C
+                            (rising edge-triggered cell FDRE)
+  Destination:            Result_out[11]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        83.148ns  (logic 4.104ns (4.936%)  route 79.044ns (95.064%))
+  Logic Levels:           22  (CARRY8=1 FDRE=1 LUT3=1 LUT4=2 LUT5=3 LUT6=6 MUXF7=5 MUXF8=2 OBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X23Y228        FDRE                         0.000     0.000 r  u_fetch_unit_top/u_pc/pc_reg[5]/C
+    SLICE_X23Y228        FDRE (Prop_CFF2_SLICEL_C_Q)
+                                                      0.136     0.136 r  u_fetch_unit_top/u_pc/pc_reg[5]/Q
+                         net (fo=29, routed)          1.696     1.832    u_fetch_unit_top/u_instruction_memory/addr[5]
+    SLICE_X13Y228        LUT6 (Prop_C6LUT_SLICEM_I5_O)
+                                                      0.149     1.981 r  u_fetch_unit_top/u_instruction_memory/instr[23]_INST_0/O
+                         net (fo=227, routed)         2.561     4.542    u_decode_top/u_register_file/RA2[3]
+    SLICE_X10Y238        LUT4 (Prop_H6LUT_SLICEM_I1_O)
+                                                      0.174     4.716 r  u_decode_top/u_register_file/rs2_data[25]_INST_0_i_7/O
+                         net (fo=1, routed)           0.020     4.736    u_decode_top/u_register_file/rs2_data[25]_INST_0_i_7_n_0
+    SLICE_X10Y238        MUXF7 (Prop_F7MUX_GH_SLICEM_I0_O)
+                                                      0.125     4.861 r  u_decode_top/u_register_file/rs2_data[25]_INST_0_i_2/O
+                         net (fo=1, routed)           0.407     5.268    u_decode_top/u_register_file/rs2_data[25]_INST_0_i_2_n_0
+    SLICE_X11Y238        LUT6 (Prop_H6LUT_SLICEL_I1_O)
+                                                      0.173     5.441 r  u_decode_top/u_register_file/rs2_data[25]_INST_0/O
+                         net (fo=1425, routed)       10.048    15.489    u_execute_top/u_srcB_mux/rs2_data[25]
+    SLICE_X15Y231        LUT3 (Prop_G5LUT_SLICEL_I1_O)
+                                                      0.110    15.599 r  u_execute_top/u_srcB_mux/SrcB[25]_INST_0/O
+                         net (fo=8, routed)           0.520    16.120    u_execute_top/u_alu/SrcB[25]
+    SLICE_X18Y233        LUT4 (Prop_E6LUT_SLICEM_I2_O)
+                                                      0.215    16.335 r  u_execute_top/u_alu/IEUAdr[0]_INST_0_i_40/O
+                         net (fo=1, routed)           0.018    16.353    u_execute_top/u_alu/IEUAdr[0]_INST_0_i_40_n_0
+    SLICE_X18Y233        CARRY8 (Prop_CARRY8_SLICEM_S[4]_CO[7])
+                                                      0.294    16.647 r  u_execute_top/u_alu/IEUAdr[0]_INST_0_i_8/CO[7]
+                         net (fo=1, routed)           0.513    17.160    u_execute_top/u_alu/data3
+    SLICE_X17Y230        LUT6 (Prop_H6LUT_SLICEM_I0_O)
+                                                      0.218    17.378 r  u_execute_top/u_alu/IEUAdr[0]_INST_0_i_5/O
+                         net (fo=1, routed)           0.135    17.513    u_execute_top/u_alu/IEUAdr[0]_INST_0_i_5_n_0
+    SLICE_X17Y230        LUT5 (Prop_D6LUT_SLICEM_I4_O)
+                                                      0.213    17.726 r  u_execute_top/u_alu/IEUAdr[0]_INST_0_i_1/O
+                         net (fo=1, routed)           0.032    17.758    u_execute_top/u_alu/IEUAdr[0]_INST_0_i_1_n_0
+    SLICE_X17Y230        MUXF7 (Prop_F7MUX_CD_SLICEM_I0_O)
+                                                      0.132    17.890 r  u_execute_top/u_alu/IEUAdr[0]_INST_0/O
+                         net (fo=31601, routed)      55.615    73.505    u_data_memory/address[0]
+    SLICE_X45Y16         LUT6 (Prop_D6LUT_SLICEM_I4_O)
+                                                      0.091    73.596 r  u_data_memory/read_data[11]_INST_0_i_852/O
+                         net (fo=1, routed)           0.032    73.628    u_data_memory/read_data[11]_INST_0_i_852_n_0
+    SLICE_X45Y16         MUXF7 (Prop_F7MUX_CD_SLICEM_I0_O)
+                                                      0.124    73.752 r  u_data_memory/read_data[11]_INST_0_i_392/O
+                         net (fo=1, routed)           0.000    73.752    u_data_memory/read_data[11]_INST_0_i_392_n_0
+    SLICE_X45Y16         MUXF8 (Prop_F8MUX_BOT_SLICEM_I0_O)
+                                                      0.043    73.795 r  u_data_memory/read_data[11]_INST_0_i_162/O
+                         net (fo=1, routed)           0.656    74.451    u_data_memory/read_data[11]_INST_0_i_162_n_0
+    SLICE_X43Y16         LUT6 (Prop_C6LUT_SLICEM_I3_O)
+                                                      0.149    74.600 r  u_data_memory/read_data[11]_INST_0_i_53/O
+                         net (fo=1, routed)           0.029    74.629    u_data_memory/read_data[11]_INST_0_i_53_n_0
+    SLICE_X43Y16         MUXF7 (Prop_F7MUX_CD_SLICEM_I1_O)
+                                                      0.124    74.753 r  u_data_memory/read_data[11]_INST_0_i_24/O
+                         net (fo=1, routed)           0.000    74.753    u_data_memory/read_data[11]_INST_0_i_24_n_0
+    SLICE_X43Y16         MUXF8 (Prop_F8MUX_BOT_SLICEM_I0_O)
+                                                      0.043    74.796 r  u_data_memory/read_data[11]_INST_0_i_10/O
+                         net (fo=1, routed)           1.570    76.366    u_data_memory/read_data[11]_INST_0_i_10_n_0
+    SLICE_X33Y124        LUT6 (Prop_C6LUT_SLICEL_I3_O)
+                                                      0.248    76.614 r  u_data_memory/read_data[11]_INST_0_i_3/O
+                         net (fo=1, routed)           0.015    76.629    u_data_memory/read_data[11]_INST_0_i_3_n_0
+    SLICE_X33Y124        MUXF7 (Prop_F7MUX_CD_SLICEL_I1_O)
+                                                      0.119    76.748 r  u_data_memory/read_data[11]_INST_0_i_1/O
+                         net (fo=1, routed)           1.016    77.764    u_data_memory/raw_half[11]
+    SLICE_X23Y179        LUT5 (Prop_F6LUT_SLICEL_I3_O)
+                                                      0.150    77.914 r  u_data_memory/read_data[11]_INST_0/O
+                         net (fo=2, routed)           0.355    78.269    u_result_mux/ReadData[11]
+    SLICE_X23Y187        LUT5 (Prop_F6LUT_SLICEL_I0_O)
+                                                      0.058    78.327 r  u_result_mux/Result[11]_INST_0/O
+                         net (fo=16, routed)          3.805    82.132    Result_out_OBUF[11]
+    AH4                  OBUF (Prop_OUTBUF_HPIOB_S_I_O)
+                                                      1.016    83.148 r  Result_out_OBUF[11]_inst/O
+                         net (fo=0)                   0.000    83.148    Result_out[11]
+    AH4                                                               r  Result_out[11] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 u_fetch_unit_top/u_pc/pc_reg[5]/C
+                            (rising edge-triggered cell FDRE)
+  Destination:            Result_out[18]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        82.854ns  (logic 4.211ns (5.082%)  route 78.643ns (94.918%))
+  Logic Levels:           22  (CARRY8=1 FDRE=1 LUT3=1 LUT4=2 LUT5=2 LUT6=7 MUXF7=5 MUXF8=2 OBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X23Y228        FDRE                         0.000     0.000 r  u_fetch_unit_top/u_pc/pc_reg[5]/C
+    SLICE_X23Y228        FDRE (Prop_CFF2_SLICEL_C_Q)
+                                                      0.136     0.136 r  u_fetch_unit_top/u_pc/pc_reg[5]/Q
+                         net (fo=29, routed)          1.696     1.832    u_fetch_unit_top/u_instruction_memory/addr[5]
+    SLICE_X13Y228        LUT6 (Prop_C6LUT_SLICEM_I5_O)
+                                                      0.149     1.981 r  u_fetch_unit_top/u_instruction_memory/instr[23]_INST_0/O
+                         net (fo=227, routed)         2.561     4.542    u_decode_top/u_register_file/RA2[3]
+    SLICE_X10Y238        LUT4 (Prop_H6LUT_SLICEM_I1_O)
+                                                      0.174     4.716 r  u_decode_top/u_register_file/rs2_data[25]_INST_0_i_7/O
+                         net (fo=1, routed)           0.020     4.736    u_decode_top/u_register_file/rs2_data[25]_INST_0_i_7_n_0
+    SLICE_X10Y238        MUXF7 (Prop_F7MUX_GH_SLICEM_I0_O)
+                                                      0.125     4.861 r  u_decode_top/u_register_file/rs2_data[25]_INST_0_i_2/O
+                         net (fo=1, routed)           0.407     5.268    u_decode_top/u_register_file/rs2_data[25]_INST_0_i_2_n_0
+    SLICE_X11Y238        LUT6 (Prop_H6LUT_SLICEL_I1_O)
+                                                      0.173     5.441 r  u_decode_top/u_register_file/rs2_data[25]_INST_0/O
+                         net (fo=1425, routed)       10.048    15.489    u_execute_top/u_srcB_mux/rs2_data[25]
+    SLICE_X15Y231        LUT3 (Prop_G5LUT_SLICEL_I1_O)
+                                                      0.110    15.599 r  u_execute_top/u_srcB_mux/SrcB[25]_INST_0/O
+                         net (fo=8, routed)           0.520    16.120    u_execute_top/u_alu/SrcB[25]
+    SLICE_X18Y233        LUT4 (Prop_E6LUT_SLICEM_I2_O)
+                                                      0.215    16.335 r  u_execute_top/u_alu/IEUAdr[0]_INST_0_i_40/O
+                         net (fo=1, routed)           0.018    16.353    u_execute_top/u_alu/IEUAdr[0]_INST_0_i_40_n_0
+    SLICE_X18Y233        CARRY8 (Prop_CARRY8_SLICEM_S[4]_CO[7])
+                                                      0.294    16.647 r  u_execute_top/u_alu/IEUAdr[0]_INST_0_i_8/CO[7]
+                         net (fo=1, routed)           0.513    17.160    u_execute_top/u_alu/data3
+    SLICE_X17Y230        LUT6 (Prop_H6LUT_SLICEM_I0_O)
+                                                      0.218    17.378 r  u_execute_top/u_alu/IEUAdr[0]_INST_0_i_5/O
+                         net (fo=1, routed)           0.135    17.513    u_execute_top/u_alu/IEUAdr[0]_INST_0_i_5_n_0
+    SLICE_X17Y230        LUT5 (Prop_D6LUT_SLICEM_I4_O)
+                                                      0.213    17.726 r  u_execute_top/u_alu/IEUAdr[0]_INST_0_i_1/O
+                         net (fo=1, routed)           0.032    17.758    u_execute_top/u_alu/IEUAdr[0]_INST_0_i_1_n_0
+    SLICE_X17Y230        MUXF7 (Prop_F7MUX_CD_SLICEM_I0_O)
+                                                      0.132    17.890 r  u_execute_top/u_alu/IEUAdr[0]_INST_0/O
+                         net (fo=31601, routed)      53.607    71.497    u_data_memory/address[0]
+    SLICE_X44Y21         LUT6 (Prop_H6LUT_SLICEL_I4_O)
+                                                      0.094    71.591 r  u_data_memory/read_data[18]_INST_0_i_852/O
+                         net (fo=1, routed)           0.015    71.606    u_data_memory/read_data[18]_INST_0_i_852_n_0
+    SLICE_X44Y21         MUXF7 (Prop_F7MUX_GH_SLICEL_I0_O)
+                                                      0.112    71.718 r  u_data_memory/read_data[18]_INST_0_i_392/O
+                         net (fo=1, routed)           0.000    71.718    u_data_memory/read_data[18]_INST_0_i_392_n_0
+    SLICE_X44Y21         MUXF8 (Prop_F8MUX_TOP_SLICEL_I0_O)
+                                                      0.038    71.756 r  u_data_memory/read_data[18]_INST_0_i_162/O
+                         net (fo=1, routed)           0.600    72.356    u_data_memory/read_data[18]_INST_0_i_162_n_0
+    SLICE_X41Y16         LUT6 (Prop_C6LUT_SLICEM_I3_O)
+                                                      0.247    72.603 r  u_data_memory/read_data[18]_INST_0_i_53/O
+                         net (fo=1, routed)           0.029    72.632    u_data_memory/read_data[18]_INST_0_i_53_n_0
+    SLICE_X41Y16         MUXF7 (Prop_F7MUX_CD_SLICEM_I1_O)
+                                                      0.124    72.756 r  u_data_memory/read_data[18]_INST_0_i_24/O
+                         net (fo=1, routed)           0.000    72.756    u_data_memory/read_data[18]_INST_0_i_24_n_0
+    SLICE_X41Y16         MUXF8 (Prop_F8MUX_BOT_SLICEM_I0_O)
+                                                      0.043    72.799 r  u_data_memory/read_data[18]_INST_0_i_10/O
+                         net (fo=1, routed)           1.867    74.666    u_data_memory/read_data[18]_INST_0_i_10_n_0
+    SLICE_X33Y124        LUT6 (Prop_G6LUT_SLICEL_I3_O)
+                                                      0.215    74.881 r  u_data_memory/read_data[18]_INST_0_i_3/O
+                         net (fo=1, routed)           0.013    74.894    u_data_memory/read_data[18]_INST_0_i_3_n_0
+    SLICE_X33Y124        MUXF7 (Prop_F7MUX_GH_SLICEL_I1_O)
+                                                      0.118    75.012 r  u_data_memory/read_data[18]_INST_0_i_1/O
+                         net (fo=1, routed)           1.283    76.295    u_data_memory/read_data[18]_INST_0_i_1_n_0
+    SLICE_X23Y199        LUT6 (Prop_H6LUT_SLICEL_I4_O)
+                                                      0.060    76.355 r  u_data_memory/read_data[18]_INST_0/O
+                         net (fo=2, routed)           1.122    77.477    u_result_mux/ReadData[18]
+    SLICE_X22Y229        LUT5 (Prop_F6LUT_SLICEL_I0_O)
+                                                      0.251    77.728 r  u_result_mux/Result[18]_INST_0/O
+                         net (fo=16, routed)          4.156    81.884    Result_out_OBUF[18]
+    AB4                  OBUF (Prop_OUTBUF_HPIOB_M_I_O)
+                                                      0.970    82.854 r  Result_out_OBUF[18]_inst/O
+                         net (fo=0)                   0.000    82.854    Result_out[18]
+    AB4                                                               r  Result_out[18] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 u_fetch_unit_top/u_pc/pc_reg[5]/C
+                            (rising edge-triggered cell FDRE)
+  Destination:            Result_out[2]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        81.972ns  (logic 4.104ns (5.006%)  route 77.869ns (94.994%))
+  Logic Levels:           22  (CARRY8=1 FDRE=1 LUT3=1 LUT4=3 LUT5=2 LUT6=6 MUXF7=5 MUXF8=2 OBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X23Y228        FDRE                         0.000     0.000 r  u_fetch_unit_top/u_pc/pc_reg[5]/C
+    SLICE_X23Y228        FDRE (Prop_CFF2_SLICEL_C_Q)
+                                                      0.136     0.136 r  u_fetch_unit_top/u_pc/pc_reg[5]/Q
+                         net (fo=29, routed)          1.696     1.832    u_fetch_unit_top/u_instruction_memory/addr[5]
+    SLICE_X13Y228        LUT6 (Prop_C6LUT_SLICEM_I5_O)
+                                                      0.149     1.981 r  u_fetch_unit_top/u_instruction_memory/instr[23]_INST_0/O
+                         net (fo=227, routed)         2.561     4.542    u_decode_top/u_register_file/RA2[3]
+    SLICE_X10Y238        LUT4 (Prop_H6LUT_SLICEM_I1_O)
+                                                      0.174     4.716 r  u_decode_top/u_register_file/rs2_data[25]_INST_0_i_7/O
+                         net (fo=1, routed)           0.020     4.736    u_decode_top/u_register_file/rs2_data[25]_INST_0_i_7_n_0
+    SLICE_X10Y238        MUXF7 (Prop_F7MUX_GH_SLICEM_I0_O)
+                                                      0.125     4.861 r  u_decode_top/u_register_file/rs2_data[25]_INST_0_i_2/O
+                         net (fo=1, routed)           0.407     5.268    u_decode_top/u_register_file/rs2_data[25]_INST_0_i_2_n_0
+    SLICE_X11Y238        LUT6 (Prop_H6LUT_SLICEL_I1_O)
+                                                      0.173     5.441 r  u_decode_top/u_register_file/rs2_data[25]_INST_0/O
+                         net (fo=1425, routed)       10.048    15.489    u_execute_top/u_srcB_mux/rs2_data[25]
+    SLICE_X15Y231        LUT3 (Prop_G5LUT_SLICEL_I1_O)
+                                                      0.110    15.599 r  u_execute_top/u_srcB_mux/SrcB[25]_INST_0/O
+                         net (fo=8, routed)           0.520    16.120    u_execute_top/u_alu/SrcB[25]
+    SLICE_X18Y233        LUT4 (Prop_E6LUT_SLICEM_I2_O)
+                                                      0.215    16.335 r  u_execute_top/u_alu/IEUAdr[0]_INST_0_i_40/O
+                         net (fo=1, routed)           0.018    16.353    u_execute_top/u_alu/IEUAdr[0]_INST_0_i_40_n_0
+    SLICE_X18Y233        CARRY8 (Prop_CARRY8_SLICEM_S[4]_CO[7])
+                                                      0.294    16.647 r  u_execute_top/u_alu/IEUAdr[0]_INST_0_i_8/CO[7]
+                         net (fo=1, routed)           0.513    17.160    u_execute_top/u_alu/data3
+    SLICE_X17Y230        LUT6 (Prop_H6LUT_SLICEM_I0_O)
+                                                      0.218    17.378 r  u_execute_top/u_alu/IEUAdr[0]_INST_0_i_5/O
+                         net (fo=1, routed)           0.135    17.513    u_execute_top/u_alu/IEUAdr[0]_INST_0_i_5_n_0
+    SLICE_X17Y230        LUT5 (Prop_D6LUT_SLICEM_I4_O)
+                                                      0.213    17.726 r  u_execute_top/u_alu/IEUAdr[0]_INST_0_i_1/O
+                         net (fo=1, routed)           0.032    17.758    u_execute_top/u_alu/IEUAdr[0]_INST_0_i_1_n_0
+    SLICE_X17Y230        MUXF7 (Prop_F7MUX_CD_SLICEM_I0_O)
+                                                      0.132    17.890 r  u_execute_top/u_alu/IEUAdr[0]_INST_0/O
+                         net (fo=31601, routed)      53.983    71.873    u_data_memory/address[0]
+    SLICE_X44Y22         LUT6 (Prop_F6LUT_SLICEL_I4_O)
+                                                      0.092    71.965 r  u_data_memory/read_data[2]_INST_0_i_854/O
+                         net (fo=1, routed)           0.016    71.981    u_data_memory/read_data[2]_INST_0_i_854_n_0
+    SLICE_X44Y22         MUXF7 (Prop_F7MUX_EF_SLICEL_I0_O)
+                                                      0.111    72.092 r  u_data_memory/read_data[2]_INST_0_i_393/O
+                         net (fo=1, routed)           0.000    72.092    u_data_memory/read_data[2]_INST_0_i_393_n_0
+    SLICE_X44Y22         MUXF8 (Prop_F8MUX_TOP_SLICEL_I1_O)
+                                                      0.037    72.129 r  u_data_memory/read_data[2]_INST_0_i_162/O
+                         net (fo=1, routed)           0.692    72.821    u_data_memory/read_data[2]_INST_0_i_162_n_0
+    SLICE_X42Y13         LUT6 (Prop_C6LUT_SLICEL_I3_O)
+                                                      0.058    72.879 r  u_data_memory/read_data[2]_INST_0_i_53/O
+                         net (fo=1, routed)           0.015    72.894    u_data_memory/read_data[2]_INST_0_i_53_n_0
+    SLICE_X42Y13         MUXF7 (Prop_F7MUX_CD_SLICEL_I1_O)
+                                                      0.111    73.005 r  u_data_memory/read_data[2]_INST_0_i_24/O
+                         net (fo=1, routed)           0.000    73.005    u_data_memory/read_data[2]_INST_0_i_24_n_0
+    SLICE_X42Y13         MUXF8 (Prop_F8MUX_BOT_SLICEL_I0_O)
+                                                      0.035    73.040 r  u_data_memory/read_data[2]_INST_0_i_10/O
+                         net (fo=1, routed)           1.438    74.478    u_data_memory/read_data[2]_INST_0_i_10_n_0
+    SLICE_X32Y125        LUT6 (Prop_G6LUT_SLICEM_I3_O)
+                                                      0.151    74.629 r  u_data_memory/read_data[2]_INST_0_i_3/O
+                         net (fo=1, routed)           0.021    74.650    u_data_memory/read_data[2]_INST_0_i_3_n_0
+    SLICE_X32Y125        MUXF7 (Prop_F7MUX_GH_SLICEM_I1_O)
+                                                      0.127    74.777 r  u_data_memory/read_data[2]_INST_0_i_1/O
+                         net (fo=1, routed)           2.447    77.224    u_data_memory/read_data[2]_INST_0_i_1_n_0
+    SLICE_X23Y196        LUT4 (Prop_H6LUT_SLICEL_I2_O)
+                                                      0.216    77.440 r  u_data_memory/read_data[2]_INST_0/O
+                         net (fo=2, routed)           0.721    78.161    u_result_mux/ReadData[2]
+    SLICE_X22Y196        LUT5 (Prop_H6LUT_SLICEL_I0_O)
+                                                      0.216    78.377 r  u_result_mux/Result[2]_INST_0/O
+                         net (fo=16, routed)          2.585    80.962    Result_out_OBUF[2]
+    AH2                  OBUF (Prop_OUTBUF_HPIOB_M_I_O)
+                                                      1.011    81.972 r  Result_out_OBUF[2]_inst/O
+                         net (fo=0)                   0.000    81.972    Result_out[2]
+    AH2                                                               r  Result_out[2] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 u_fetch_unit_top/u_pc/pc_reg[5]/C
+                            (rising edge-triggered cell FDRE)
+  Destination:            Result_out[12]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        81.566ns  (logic 4.221ns (5.175%)  route 77.345ns (94.825%))
+  Logic Levels:           22  (CARRY8=1 FDRE=1 LUT3=1 LUT4=2 LUT5=3 LUT6=6 MUXF7=5 MUXF8=2 OBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X23Y228        FDRE                         0.000     0.000 r  u_fetch_unit_top/u_pc/pc_reg[5]/C
+    SLICE_X23Y228        FDRE (Prop_CFF2_SLICEL_C_Q)
+                                                      0.136     0.136 r  u_fetch_unit_top/u_pc/pc_reg[5]/Q
+                         net (fo=29, routed)          1.696     1.832    u_fetch_unit_top/u_instruction_memory/addr[5]
+    SLICE_X13Y228        LUT6 (Prop_C6LUT_SLICEM_I5_O)
+                                                      0.149     1.981 r  u_fetch_unit_top/u_instruction_memory/instr[23]_INST_0/O
+                         net (fo=227, routed)         2.561     4.542    u_decode_top/u_register_file/RA2[3]
+    SLICE_X10Y238        LUT4 (Prop_H6LUT_SLICEM_I1_O)
+                                                      0.174     4.716 r  u_decode_top/u_register_file/rs2_data[25]_INST_0_i_7/O
+                         net (fo=1, routed)           0.020     4.736    u_decode_top/u_register_file/rs2_data[25]_INST_0_i_7_n_0
+    SLICE_X10Y238        MUXF7 (Prop_F7MUX_GH_SLICEM_I0_O)
+                                                      0.125     4.861 r  u_decode_top/u_register_file/rs2_data[25]_INST_0_i_2/O
+                         net (fo=1, routed)           0.407     5.268    u_decode_top/u_register_file/rs2_data[25]_INST_0_i_2_n_0
+    SLICE_X11Y238        LUT6 (Prop_H6LUT_SLICEL_I1_O)
+                                                      0.173     5.441 r  u_decode_top/u_register_file/rs2_data[25]_INST_0/O
+                         net (fo=1425, routed)       10.048    15.489    u_execute_top/u_srcB_mux/rs2_data[25]
+    SLICE_X15Y231        LUT3 (Prop_G5LUT_SLICEL_I1_O)
+                                                      0.110    15.599 r  u_execute_top/u_srcB_mux/SrcB[25]_INST_0/O
+                         net (fo=8, routed)           0.520    16.120    u_execute_top/u_alu/SrcB[25]
+    SLICE_X18Y233        LUT4 (Prop_E6LUT_SLICEM_I2_O)
+                                                      0.215    16.335 r  u_execute_top/u_alu/IEUAdr[0]_INST_0_i_40/O
+                         net (fo=1, routed)           0.018    16.353    u_execute_top/u_alu/IEUAdr[0]_INST_0_i_40_n_0
+    SLICE_X18Y233        CARRY8 (Prop_CARRY8_SLICEM_S[4]_CO[7])
+                                                      0.294    16.647 r  u_execute_top/u_alu/IEUAdr[0]_INST_0_i_8/CO[7]
+                         net (fo=1, routed)           0.513    17.160    u_execute_top/u_alu/data3
+    SLICE_X17Y230        LUT6 (Prop_H6LUT_SLICEM_I0_O)
+                                                      0.218    17.378 r  u_execute_top/u_alu/IEUAdr[0]_INST_0_i_5/O
+                         net (fo=1, routed)           0.135    17.513    u_execute_top/u_alu/IEUAdr[0]_INST_0_i_5_n_0
+    SLICE_X17Y230        LUT5 (Prop_D6LUT_SLICEM_I4_O)
+                                                      0.213    17.726 r  u_execute_top/u_alu/IEUAdr[0]_INST_0_i_1/O
+                         net (fo=1, routed)           0.032    17.758    u_execute_top/u_alu/IEUAdr[0]_INST_0_i_1_n_0
+    SLICE_X17Y230        MUXF7 (Prop_F7MUX_CD_SLICEM_I0_O)
+                                                      0.132    17.890 r  u_execute_top/u_alu/IEUAdr[0]_INST_0/O
+                         net (fo=31601, routed)      53.385    71.275    u_data_memory/address[0]
+    SLICE_X38Y21         LUT6 (Prop_C6LUT_SLICEM_I4_O)
+                                                      0.091    71.366 r  u_data_memory/read_data[12]_INST_0_i_857/O
+                         net (fo=1, routed)           0.029    71.395    u_data_memory/read_data[12]_INST_0_i_857_n_0
+    SLICE_X38Y21         MUXF7 (Prop_F7MUX_CD_SLICEM_I1_O)
+                                                      0.124    71.519 r  u_data_memory/read_data[12]_INST_0_i_394/O
+                         net (fo=1, routed)           0.000    71.519    u_data_memory/read_data[12]_INST_0_i_394_n_0
+    SLICE_X38Y21         MUXF8 (Prop_F8MUX_BOT_SLICEM_I0_O)
+                                                      0.043    71.562 r  u_data_memory/read_data[12]_INST_0_i_163/O
+                         net (fo=1, routed)           0.376    71.938    u_data_memory/read_data[12]_INST_0_i_163_n_0
+    SLICE_X40Y17         LUT6 (Prop_C6LUT_SLICEM_I5_O)
+                                                      0.214    72.152 r  u_data_memory/read_data[12]_INST_0_i_53/O
+                         net (fo=1, routed)           0.029    72.181    u_data_memory/read_data[12]_INST_0_i_53_n_0
+    SLICE_X40Y17         MUXF7 (Prop_F7MUX_CD_SLICEM_I1_O)
+                                                      0.124    72.305 r  u_data_memory/read_data[12]_INST_0_i_24/O
+                         net (fo=1, routed)           0.000    72.305    u_data_memory/read_data[12]_INST_0_i_24_n_0
+    SLICE_X40Y17         MUXF8 (Prop_F8MUX_BOT_SLICEM_I0_O)
+                                                      0.043    72.348 r  u_data_memory/read_data[12]_INST_0_i_10/O
+                         net (fo=1, routed)           1.612    73.960    u_data_memory/read_data[12]_INST_0_i_10_n_0
+    SLICE_X34Y123        LUT6 (Prop_G6LUT_SLICEM_I3_O)
+                                                      0.059    74.019 r  u_data_memory/read_data[12]_INST_0_i_3/O
+                         net (fo=1, routed)           0.021    74.040    u_data_memory/read_data[12]_INST_0_i_3_n_0
+    SLICE_X34Y123        MUXF7 (Prop_F7MUX_GH_SLICEM_I1_O)
+                                                      0.127    74.167 r  u_data_memory/read_data[12]_INST_0_i_1/O
+                         net (fo=1, routed)           1.086    75.253    u_data_memory/raw_half[12]
+    SLICE_X23Y178        LUT5 (Prop_F6LUT_SLICEL_I3_O)
+                                                      0.215    75.468 r  u_data_memory/read_data[12]_INST_0/O
+                         net (fo=2, routed)           1.199    76.668    u_result_mux/ReadData[12]
+    SLICE_X22Y229        LUT5 (Prop_H6LUT_SLICEL_I0_O)
+                                                      0.255    76.923 r  u_result_mux/Result[12]_INST_0/O
+                         net (fo=16, routed)          3.656    80.579    Result_out_OBUF[12]
+    AB1                  OBUF (Prop_OUTBUF_HPIOB_M_I_O)
+                                                      0.987    81.566 r  Result_out_OBUF[12]_inst/O
+                         net (fo=0)                   0.000    81.566    Result_out[12]
+    AB1                                                               r  Result_out[12] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 u_fetch_unit_top/u_pc/pc_reg[5]/C
+                            (rising edge-triggered cell FDRE)
+  Destination:            Result_out[14]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        81.353ns  (logic 4.124ns (5.069%)  route 77.229ns (94.931%))
+  Logic Levels:           22  (CARRY8=1 FDRE=1 LUT3=1 LUT4=2 LUT5=3 LUT6=6 MUXF7=5 MUXF8=2 OBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X23Y228        FDRE                         0.000     0.000 r  u_fetch_unit_top/u_pc/pc_reg[5]/C
+    SLICE_X23Y228        FDRE (Prop_CFF2_SLICEL_C_Q)
+                                                      0.136     0.136 r  u_fetch_unit_top/u_pc/pc_reg[5]/Q
+                         net (fo=29, routed)          1.696     1.832    u_fetch_unit_top/u_instruction_memory/addr[5]
+    SLICE_X13Y228        LUT6 (Prop_C6LUT_SLICEM_I5_O)
+                                                      0.149     1.981 r  u_fetch_unit_top/u_instruction_memory/instr[23]_INST_0/O
+                         net (fo=227, routed)         2.561     4.542    u_decode_top/u_register_file/RA2[3]
+    SLICE_X10Y238        LUT4 (Prop_H6LUT_SLICEM_I1_O)
+                                                      0.174     4.716 r  u_decode_top/u_register_file/rs2_data[25]_INST_0_i_7/O
+                         net (fo=1, routed)           0.020     4.736    u_decode_top/u_register_file/rs2_data[25]_INST_0_i_7_n_0
+    SLICE_X10Y238        MUXF7 (Prop_F7MUX_GH_SLICEM_I0_O)
+                                                      0.125     4.861 r  u_decode_top/u_register_file/rs2_data[25]_INST_0_i_2/O
+                         net (fo=1, routed)           0.407     5.268    u_decode_top/u_register_file/rs2_data[25]_INST_0_i_2_n_0
+    SLICE_X11Y238        LUT6 (Prop_H6LUT_SLICEL_I1_O)
+                                                      0.173     5.441 r  u_decode_top/u_register_file/rs2_data[25]_INST_0/O
+                         net (fo=1425, routed)       10.048    15.489    u_execute_top/u_srcB_mux/rs2_data[25]
+    SLICE_X15Y231        LUT3 (Prop_G5LUT_SLICEL_I1_O)
+                                                      0.110    15.599 r  u_execute_top/u_srcB_mux/SrcB[25]_INST_0/O
+                         net (fo=8, routed)           0.520    16.120    u_execute_top/u_alu/SrcB[25]
+    SLICE_X18Y233        LUT4 (Prop_E6LUT_SLICEM_I2_O)
+                                                      0.215    16.335 r  u_execute_top/u_alu/IEUAdr[0]_INST_0_i_40/O
+                         net (fo=1, routed)           0.018    16.353    u_execute_top/u_alu/IEUAdr[0]_INST_0_i_40_n_0
+    SLICE_X18Y233        CARRY8 (Prop_CARRY8_SLICEM_S[4]_CO[7])
+                                                      0.294    16.647 r  u_execute_top/u_alu/IEUAdr[0]_INST_0_i_8/CO[7]
+                         net (fo=1, routed)           0.513    17.160    u_execute_top/u_alu/data3
+    SLICE_X17Y230        LUT6 (Prop_H6LUT_SLICEM_I0_O)
+                                                      0.218    17.378 r  u_execute_top/u_alu/IEUAdr[0]_INST_0_i_5/O
+                         net (fo=1, routed)           0.135    17.513    u_execute_top/u_alu/IEUAdr[0]_INST_0_i_5_n_0
+    SLICE_X17Y230        LUT5 (Prop_D6LUT_SLICEM_I4_O)
+                                                      0.213    17.726 r  u_execute_top/u_alu/IEUAdr[0]_INST_0_i_1/O
+                         net (fo=1, routed)           0.032    17.758    u_execute_top/u_alu/IEUAdr[0]_INST_0_i_1_n_0
+    SLICE_X17Y230        MUXF7 (Prop_F7MUX_CD_SLICEM_I0_O)
+                                                      0.132    17.890 r  u_execute_top/u_alu/IEUAdr[0]_INST_0/O
+                         net (fo=31601, routed)      52.723    70.613    u_data_memory/address[0]
+    SLICE_X25Y22         LUT6 (Prop_B6LUT_SLICEM_I4_O)
+                                                      0.093    70.706 r  u_data_memory/read_data[14]_INST_0_i_878/O
+                         net (fo=1, routed)           0.022    70.728    u_data_memory/read_data[14]_INST_0_i_878_n_0
+    SLICE_X25Y22         MUXF7 (Prop_F7MUX_AB_SLICEM_I0_O)
+                                                      0.119    70.847 r  u_data_memory/read_data[14]_INST_0_i_405/O
+                         net (fo=1, routed)           0.000    70.847    u_data_memory/read_data[14]_INST_0_i_405_n_0
+    SLICE_X25Y22         MUXF8 (Prop_F8MUX_BOT_SLICEM_I1_O)
+                                                      0.041    70.888 r  u_data_memory/read_data[14]_INST_0_i_168/O
+                         net (fo=1, routed)           0.779    71.667    u_data_memory/read_data[14]_INST_0_i_168_n_0
+    SLICE_X42Y18         LUT6 (Prop_E6LUT_SLICEL_I0_O)
+                                                      0.152    71.819 r  u_data_memory/read_data[14]_INST_0_i_55/O
+                         net (fo=1, routed)           0.011    71.830    u_data_memory/read_data[14]_INST_0_i_55_n_0
+    SLICE_X42Y18         MUXF7 (Prop_F7MUX_EF_SLICEL_I1_O)
+                                                      0.109    71.939 r  u_data_memory/read_data[14]_INST_0_i_25/O
+                         net (fo=1, routed)           0.000    71.939    u_data_memory/read_data[14]_INST_0_i_25_n_0
+    SLICE_X42Y18         MUXF8 (Prop_F8MUX_TOP_SLICEL_I1_O)
+                                                      0.037    71.976 r  u_data_memory/read_data[14]_INST_0_i_10/O
+                         net (fo=1, routed)           1.661    73.637    u_data_memory/read_data[14]_INST_0_i_10_n_0
+    SLICE_X31Y122        LUT6 (Prop_G6LUT_SLICEM_I3_O)
+                                                      0.253    73.890 r  u_data_memory/read_data[14]_INST_0_i_3/O
+                         net (fo=1, routed)           0.021    73.911    u_data_memory/read_data[14]_INST_0_i_3_n_0
+    SLICE_X31Y122        MUXF7 (Prop_F7MUX_GH_SLICEM_I1_O)
+                                                      0.127    74.038 r  u_data_memory/read_data[14]_INST_0_i_1/O
+                         net (fo=1, routed)           1.102    75.140    u_data_memory/raw_half[14]
+    SLICE_X23Y180        LUT5 (Prop_F6LUT_SLICEL_I3_O)
+                                                      0.215    75.355 r  u_data_memory/read_data[14]_INST_0/O
+                         net (fo=2, routed)           0.801    76.156    u_result_mux/ReadData[14]
+    SLICE_X24Y230        LUT5 (Prop_H6LUT_SLICEM_I0_O)
+                                                      0.061    76.217 r  u_result_mux/Result[14]_INST_0/O
+                         net (fo=16, routed)          4.158    80.375    Result_out_OBUF[14]
+    AB2                  OBUF (Prop_OUTBUF_HPIOB_M_I_O)
+                                                      0.978    81.353 r  Result_out_OBUF[14]_inst/O
+                         net (fo=0)                   0.000    81.353    Result_out[14]
+    AB2                                                               r  Result_out[14] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 u_fetch_unit_top/u_pc/pc_reg[5]/C
+                            (rising edge-triggered cell FDRE)
+  Destination:            Result_out[22]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        81.347ns  (logic 4.034ns (4.958%)  route 77.313ns (95.042%))
+  Logic Levels:           22  (CARRY8=1 FDRE=1 LUT3=1 LUT4=2 LUT5=2 LUT6=7 MUXF7=5 MUXF8=2 OBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X23Y228        FDRE                         0.000     0.000 r  u_fetch_unit_top/u_pc/pc_reg[5]/C
+    SLICE_X23Y228        FDRE (Prop_CFF2_SLICEL_C_Q)
+                                                      0.136     0.136 r  u_fetch_unit_top/u_pc/pc_reg[5]/Q
+                         net (fo=29, routed)          1.696     1.832    u_fetch_unit_top/u_instruction_memory/addr[5]
+    SLICE_X13Y228        LUT6 (Prop_C6LUT_SLICEM_I5_O)
+                                                      0.149     1.981 r  u_fetch_unit_top/u_instruction_memory/instr[23]_INST_0/O
+                         net (fo=227, routed)         2.561     4.542    u_decode_top/u_register_file/RA2[3]
+    SLICE_X10Y238        LUT4 (Prop_H6LUT_SLICEM_I1_O)
+                                                      0.174     4.716 r  u_decode_top/u_register_file/rs2_data[25]_INST_0_i_7/O
+                         net (fo=1, routed)           0.020     4.736    u_decode_top/u_register_file/rs2_data[25]_INST_0_i_7_n_0
+    SLICE_X10Y238        MUXF7 (Prop_F7MUX_GH_SLICEM_I0_O)
+                                                      0.125     4.861 r  u_decode_top/u_register_file/rs2_data[25]_INST_0_i_2/O
+                         net (fo=1, routed)           0.407     5.268    u_decode_top/u_register_file/rs2_data[25]_INST_0_i_2_n_0
+    SLICE_X11Y238        LUT6 (Prop_H6LUT_SLICEL_I1_O)
+                                                      0.173     5.441 r  u_decode_top/u_register_file/rs2_data[25]_INST_0/O
+                         net (fo=1425, routed)       10.048    15.489    u_execute_top/u_srcB_mux/rs2_data[25]
+    SLICE_X15Y231        LUT3 (Prop_G5LUT_SLICEL_I1_O)
+                                                      0.110    15.599 r  u_execute_top/u_srcB_mux/SrcB[25]_INST_0/O
+                         net (fo=8, routed)           0.520    16.120    u_execute_top/u_alu/SrcB[25]
+    SLICE_X18Y233        LUT4 (Prop_E6LUT_SLICEM_I2_O)
+                                                      0.215    16.335 r  u_execute_top/u_alu/IEUAdr[0]_INST_0_i_40/O
+                         net (fo=1, routed)           0.018    16.353    u_execute_top/u_alu/IEUAdr[0]_INST_0_i_40_n_0
+    SLICE_X18Y233        CARRY8 (Prop_CARRY8_SLICEM_S[4]_CO[7])
+                                                      0.294    16.647 r  u_execute_top/u_alu/IEUAdr[0]_INST_0_i_8/CO[7]
+                         net (fo=1, routed)           0.513    17.160    u_execute_top/u_alu/data3
+    SLICE_X17Y230        LUT6 (Prop_H6LUT_SLICEM_I0_O)
+                                                      0.218    17.378 r  u_execute_top/u_alu/IEUAdr[0]_INST_0_i_5/O
+                         net (fo=1, routed)           0.135    17.513    u_execute_top/u_alu/IEUAdr[0]_INST_0_i_5_n_0
+    SLICE_X17Y230        LUT5 (Prop_D6LUT_SLICEM_I4_O)
+                                                      0.213    17.726 r  u_execute_top/u_alu/IEUAdr[0]_INST_0_i_1/O
+                         net (fo=1, routed)           0.032    17.758    u_execute_top/u_alu/IEUAdr[0]_INST_0_i_1_n_0
+    SLICE_X17Y230        MUXF7 (Prop_F7MUX_CD_SLICEM_I0_O)
+                                                      0.132    17.890 r  u_execute_top/u_alu/IEUAdr[0]_INST_0/O
+                         net (fo=31601, routed)      51.560    69.450    u_data_memory/address[0]
+    SLICE_X13Y8          LUT6 (Prop_B6LUT_SLICEM_I4_O)
+                                                      0.093    69.543 r  u_data_memory/read_data[31]_INST_0_i_1772/O
+                         net (fo=1, routed)           0.022    69.565    u_data_memory/read_data[31]_INST_0_i_1772_n_0
+    SLICE_X13Y8          MUXF7 (Prop_F7MUX_AB_SLICEM_I0_O)
+                                                      0.119    69.684 r  u_data_memory/read_data[31]_INST_0_i_783/O
+                         net (fo=1, routed)           0.000    69.684    u_data_memory/read_data[31]_INST_0_i_783_n_0
+    SLICE_X13Y8          MUXF8 (Prop_F8MUX_BOT_SLICEM_I1_O)
+                                                      0.041    69.725 r  u_data_memory/read_data[31]_INST_0_i_288/O
+                         net (fo=1, routed)           1.708    71.433    u_data_memory/read_data[31]_INST_0_i_288_n_0
+    SLICE_X42Y18         LUT6 (Prop_A6LUT_SLICEL_I3_O)
+                                                      0.060    71.493 r  u_data_memory/read_data[31]_INST_0_i_109/O
+                         net (fo=1, routed)           0.014    71.507    u_data_memory/read_data[31]_INST_0_i_109_n_0
+    SLICE_X42Y18         MUXF7 (Prop_F7MUX_AB_SLICEL_I1_O)
+                                                      0.111    71.618 r  u_data_memory/read_data[31]_INST_0_i_47/O
+                         net (fo=1, routed)           0.000    71.618    u_data_memory/read_data[31]_INST_0_i_47_n_0
+    SLICE_X42Y18         MUXF8 (Prop_F8MUX_BOT_SLICEL_I1_O)
+                                                      0.035    71.653 r  u_data_memory/read_data[31]_INST_0_i_16/O
+                         net (fo=1, routed)           1.497    73.150    u_data_memory/read_data[31]_INST_0_i_16_n_0
+    SLICE_X32Y122        LUT6 (Prop_G6LUT_SLICEM_I3_O)
+                                                      0.215    73.365 r  u_data_memory/read_data[31]_INST_0_i_5/O
+                         net (fo=1, routed)           0.021    73.386    u_data_memory/read_data[31]_INST_0_i_5_n_0
+    SLICE_X32Y122        MUXF7 (Prop_F7MUX_GH_SLICEM_I1_O)
+                                                      0.127    73.513 r  u_data_memory/read_data[31]_INST_0_i_1/O
+                         net (fo=17, routed)          0.895    74.409    u_data_memory/raw_half[15]
+    SLICE_X23Y133        LUT6 (Prop_G6LUT_SLICEL_I0_O)
+                                                      0.172    74.581 r  u_data_memory/read_data[22]_INST_0/O
+                         net (fo=2, routed)           1.321    75.902    u_result_mux/ReadData[22]
+    SLICE_X23Y228        LUT5 (Prop_G6LUT_SLICEL_I0_O)
+                                                      0.151    76.053 r  u_result_mux/Result[22]_INST_0/O
+                         net (fo=16, routed)          4.323    80.376    Result_out_OBUF[22]
+    AD5                  OBUF (Prop_OUTBUF_HPIOB_M_I_O)
+                                                      0.971    81.347 r  Result_out_OBUF[22]_inst/O
+                         net (fo=0)                   0.000    81.347    Result_out[22]
+    AD5                                                               r  Result_out[22] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 u_fetch_unit_top/u_pc/pc_reg[5]/C
+                            (rising edge-triggered cell FDRE)
+  Destination:            Result_out[28]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        81.165ns  (logic 4.200ns (5.174%)  route 76.965ns (94.826%))
+  Logic Levels:           22  (CARRY8=1 FDRE=1 LUT3=1 LUT4=2 LUT5=2 LUT6=7 MUXF7=5 MUXF8=2 OBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X23Y228        FDRE                         0.000     0.000 r  u_fetch_unit_top/u_pc/pc_reg[5]/C
+    SLICE_X23Y228        FDRE (Prop_CFF2_SLICEL_C_Q)
+                                                      0.136     0.136 r  u_fetch_unit_top/u_pc/pc_reg[5]/Q
+                         net (fo=29, routed)          1.696     1.832    u_fetch_unit_top/u_instruction_memory/addr[5]
+    SLICE_X13Y228        LUT6 (Prop_C6LUT_SLICEM_I5_O)
+                                                      0.149     1.981 r  u_fetch_unit_top/u_instruction_memory/instr[23]_INST_0/O
+                         net (fo=227, routed)         2.561     4.542    u_decode_top/u_register_file/RA2[3]
+    SLICE_X10Y238        LUT4 (Prop_H6LUT_SLICEM_I1_O)
+                                                      0.174     4.716 r  u_decode_top/u_register_file/rs2_data[25]_INST_0_i_7/O
+                         net (fo=1, routed)           0.020     4.736    u_decode_top/u_register_file/rs2_data[25]_INST_0_i_7_n_0
+    SLICE_X10Y238        MUXF7 (Prop_F7MUX_GH_SLICEM_I0_O)
+                                                      0.125     4.861 r  u_decode_top/u_register_file/rs2_data[25]_INST_0_i_2/O
+                         net (fo=1, routed)           0.407     5.268    u_decode_top/u_register_file/rs2_data[25]_INST_0_i_2_n_0
+    SLICE_X11Y238        LUT6 (Prop_H6LUT_SLICEL_I1_O)
+                                                      0.173     5.441 r  u_decode_top/u_register_file/rs2_data[25]_INST_0/O
+                         net (fo=1425, routed)       10.048    15.489    u_execute_top/u_srcB_mux/rs2_data[25]
+    SLICE_X15Y231        LUT3 (Prop_G5LUT_SLICEL_I1_O)
+                                                      0.110    15.599 r  u_execute_top/u_srcB_mux/SrcB[25]_INST_0/O
+                         net (fo=8, routed)           0.520    16.120    u_execute_top/u_alu/SrcB[25]
+    SLICE_X18Y233        LUT4 (Prop_E6LUT_SLICEM_I2_O)
+                                                      0.215    16.335 r  u_execute_top/u_alu/IEUAdr[0]_INST_0_i_40/O
+                         net (fo=1, routed)           0.018    16.353    u_execute_top/u_alu/IEUAdr[0]_INST_0_i_40_n_0
+    SLICE_X18Y233        CARRY8 (Prop_CARRY8_SLICEM_S[4]_CO[7])
+                                                      0.294    16.647 r  u_execute_top/u_alu/IEUAdr[0]_INST_0_i_8/CO[7]
+                         net (fo=1, routed)           0.513    17.160    u_execute_top/u_alu/data3
+    SLICE_X17Y230        LUT6 (Prop_H6LUT_SLICEM_I0_O)
+                                                      0.218    17.378 r  u_execute_top/u_alu/IEUAdr[0]_INST_0_i_5/O
+                         net (fo=1, routed)           0.135    17.513    u_execute_top/u_alu/IEUAdr[0]_INST_0_i_5_n_0
+    SLICE_X17Y230        LUT5 (Prop_D6LUT_SLICEM_I4_O)
+                                                      0.213    17.726 r  u_execute_top/u_alu/IEUAdr[0]_INST_0_i_1/O
+                         net (fo=1, routed)           0.032    17.758    u_execute_top/u_alu/IEUAdr[0]_INST_0_i_1_n_0
+    SLICE_X17Y230        MUXF7 (Prop_F7MUX_CD_SLICEM_I0_O)
+                                                      0.132    17.890 r  u_execute_top/u_alu/IEUAdr[0]_INST_0/O
+                         net (fo=31601, routed)      54.945    72.835    u_data_memory/address[0]
+    SLICE_X57Y23         LUT6 (Prop_H6LUT_SLICEL_I4_O)
+                                                      0.094    72.929 r  u_data_memory/read_data[28]_INST_0_i_836/O
+                         net (fo=1, routed)           0.015    72.944    u_data_memory/read_data[28]_INST_0_i_836_n_0
+    SLICE_X57Y23         MUXF7 (Prop_F7MUX_GH_SLICEL_I0_O)
+                                                      0.112    73.056 r  u_data_memory/read_data[28]_INST_0_i_384/O
+                         net (fo=1, routed)           0.000    73.056    u_data_memory/read_data[28]_INST_0_i_384_n_0
+    SLICE_X57Y23         MUXF8 (Prop_F8MUX_TOP_SLICEL_I0_O)
+                                                      0.038    73.094 r  u_data_memory/read_data[28]_INST_0_i_158/O
+                         net (fo=1, routed)           1.272    74.366    u_data_memory/read_data[28]_INST_0_i_158_n_0
+    SLICE_X38Y18         LUT6 (Prop_H6LUT_SLICEM_I3_O)
+                                                      0.174    74.540 r  u_data_memory/read_data[28]_INST_0_i_52/O
+                         net (fo=1, routed)           0.020    74.560    u_data_memory/read_data[28]_INST_0_i_52_n_0
+    SLICE_X38Y18         MUXF7 (Prop_F7MUX_GH_SLICEM_I0_O)
+                                                      0.117    74.677 r  u_data_memory/read_data[28]_INST_0_i_24/O
+                         net (fo=1, routed)           0.000    74.677    u_data_memory/read_data[28]_INST_0_i_24_n_0
+    SLICE_X38Y18         MUXF8 (Prop_F8MUX_TOP_SLICEM_I0_O)
+                                                      0.038    74.715 r  u_data_memory/read_data[28]_INST_0_i_10/O
+                         net (fo=1, routed)           1.503    76.218    u_data_memory/read_data[28]_INST_0_i_10_n_0
+    SLICE_X32Y123        LUT6 (Prop_A6LUT_SLICEM_I3_O)
+                                                      0.152    76.370 r  u_data_memory/read_data[28]_INST_0_i_3/O
+                         net (fo=1, routed)           0.016    76.386    u_data_memory/read_data[28]_INST_0_i_3_n_0
+    SLICE_X32Y123        MUXF7 (Prop_F7MUX_AB_SLICEM_I1_O)
+                                                      0.123    76.509 r  u_data_memory/read_data[28]_INST_0_i_1/O
+                         net (fo=1, routed)           0.604    77.113    u_data_memory/read_data[28]_INST_0_i_1_n_0
+    SLICE_X23Y125        LUT6 (Prop_G6LUT_SLICEL_I4_O)
+                                                      0.172    77.285 r  u_data_memory/read_data[28]_INST_0/O
+                         net (fo=2, routed)           0.583    77.867    u_result_mux/ReadData[28]
+    SLICE_X23Y144        LUT5 (Prop_H6LUT_SLICEL_I0_O)
+                                                      0.255    78.122 r  u_result_mux/Result[28]_INST_0/O
+                         net (fo=16, routed)          2.057    80.179    Result_out_OBUF[28]
+    AG6                  OBUF (Prop_OUTBUF_HPIOB_M_I_O)
+                                                      0.986    81.165 r  Result_out_OBUF[28]_inst/O
+                         net (fo=0)                   0.000    81.165    Result_out[28]
+    AG6                                                               r  Result_out[28] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+
+
+
+
+Min Delay Paths
+--------------------------------------------------------------------------------------
+Slack:                    inf
+  Source:                 u_fetch_unit_top/u_pc/pc_reg[0]/C
+                            (rising edge-triggered cell FDRE)
+  Destination:            u_fetch_unit_top/u_pc/pc_reg[0]/D
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.199ns  (logic 0.151ns (75.776%)  route 0.048ns (24.224%))
+  Logic Levels:           2  (FDRE=1 LUT3=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X22Y229        FDRE                         0.000     0.000 r  u_fetch_unit_top/u_pc/pc_reg[0]/C
+    SLICE_X22Y229        FDRE (Prop_DFF_SLICEL_C_Q)
+                                                      0.084     0.084 r  u_fetch_unit_top/u_pc/pc_reg[0]/Q
+                         net (fo=4, routed)           0.030     0.114    u_fetch_unit_top/u_pc_mux/pc_plus4[0]
+    SLICE_X22Y229        LUT3 (Prop_D6LUT_SLICEL_I1_O)
+                                                      0.067     0.181 r  u_fetch_unit_top/u_pc_mux/next_pc[0]_INST_0/O
+                         net (fo=1, routed)           0.018     0.199    u_fetch_unit_top/u_pc/next_pc[0]
+    SLICE_X22Y229        FDRE                                         r  u_fetch_unit_top/u_pc/pc_reg[0]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 u_data_memory/mem_reg[1556][1]/C
+                            (rising edge-triggered cell FDRE)
+  Destination:            u_data_memory/mem_reg[1556][1]/D
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.211ns  (logic 0.142ns (67.415%)  route 0.069ns (32.585%))
+  Logic Levels:           3  (FDRE=1 LUT5=2)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X23Y76         FDRE                         0.000     0.000 r  u_data_memory/mem_reg[1556][1]/C
+    SLICE_X23Y76         FDRE (Prop_DFF_SLICEL_C_Q)
+                                                      0.084     0.084 r  u_data_memory/mem_reg[1556][1]/Q
+                         net (fo=6, routed)           0.028     0.112    u_data_memory/mem_reg_n_0_[1556][1]
+    SLICE_X23Y76         LUT5 (Prop_A6LUT_SLICEL_I4_O)
+                                                      0.037     0.149 r  u_data_memory/mem[1556][1]_i_3/O
+                         net (fo=1, routed)           0.023     0.172    u_data_memory/p_2_in[3929]
+    SLICE_X23Y76         LUT5 (Prop_D6LUT_SLICEL_I2_O)
+                                                      0.021     0.193 r  u_data_memory/mem[1556][1]_i_1/O
+                         net (fo=1, routed)           0.018     0.211    u_data_memory/mem[1556][1]_i_1_n_0
+    SLICE_X23Y76         FDRE                                         r  u_data_memory/mem_reg[1556][1]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 u_data_memory/mem_reg[1528][4]/C
+                            (rising edge-triggered cell FDRE)
+  Destination:            u_data_memory/mem_reg[1528][4]/D
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.213ns  (logic 0.142ns (66.784%)  route 0.071ns (33.216%))
+  Logic Levels:           3  (FDRE=1 LUT5=2)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X27Y23         FDRE                         0.000     0.000 r  u_data_memory/mem_reg[1528][4]/C
+    SLICE_X27Y23         FDRE (Prop_DFF_SLICEL_C_Q)
+                                                      0.084     0.084 r  u_data_memory/mem_reg[1528][4]/Q
+                         net (fo=6, routed)           0.030     0.114    u_data_memory/mem_reg_n_0_[1528][4]
+    SLICE_X27Y23         LUT5 (Prop_A6LUT_SLICEL_I4_O)
+                                                      0.037     0.151 r  u_data_memory/mem[1528][4]_i_3/O
+                         net (fo=2, routed)           0.023     0.174    u_data_memory/p_2_in[4156]
+    SLICE_X27Y23         LUT5 (Prop_D6LUT_SLICEL_I2_O)
+                                                      0.021     0.195 r  u_data_memory/mem[1528][4]_i_1/O
+                         net (fo=1, routed)           0.018     0.213    u_data_memory/mem[1528][4]_i_1_n_0
+    SLICE_X27Y23         FDRE                                         r  u_data_memory/mem_reg[1528][4]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 u_data_memory/mem_reg[388][1]/C
+                            (rising edge-triggered cell FDRE)
+  Destination:            u_data_memory/mem_reg[388][1]/D
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.214ns  (logic 0.142ns (66.271%)  route 0.072ns (33.729%))
+  Logic Levels:           3  (FDRE=1 LUT5=2)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X42Y158        FDRE                         0.000     0.000 r  u_data_memory/mem_reg[388][1]/C
+    SLICE_X42Y158        FDRE (Prop_DFF_SLICEL_C_Q)
+                                                      0.084     0.084 r  u_data_memory/mem_reg[388][1]/Q
+                         net (fo=6, routed)           0.031     0.115    u_data_memory/mem_reg_n_0_[388][1]
+    SLICE_X42Y158        LUT5 (Prop_A6LUT_SLICEL_I4_O)
+                                                      0.037     0.152 r  u_data_memory/mem[388][1]_i_3/O
+                         net (fo=1, routed)           0.023     0.175    u_data_memory/p_2_in[13273]
+    SLICE_X42Y158        LUT5 (Prop_D6LUT_SLICEL_I2_O)
+                                                      0.021     0.196 r  u_data_memory/mem[388][1]_i_1/O
+                         net (fo=1, routed)           0.018     0.214    u_data_memory/mem[388][1]_i_1_n_0
+    SLICE_X42Y158        FDRE                                         r  u_data_memory/mem_reg[388][1]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 u_data_memory/mem_reg[388][4]/C
+                            (rising edge-triggered cell FDRE)
+  Destination:            u_data_memory/mem_reg[388][4]/D
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.217ns  (logic 0.126ns (58.162%)  route 0.091ns (41.838%))
+  Logic Levels:           3  (FDRE=1 LUT5=2)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X42Y160        FDRE                         0.000     0.000 r  u_data_memory/mem_reg[388][4]/C
+    SLICE_X42Y160        FDRE (Prop_DFF_SLICEL_C_Q)
+                                                      0.084     0.084 r  u_data_memory/mem_reg[388][4]/Q
+                         net (fo=6, routed)           0.051     0.135    u_data_memory/mem_reg_n_0_[388][4]
+    SLICE_X42Y160        LUT5 (Prop_E6LUT_SLICEL_I4_O)
+                                                      0.021     0.156 r  u_data_memory/mem[388][4]_i_3/O
+                         net (fo=1, routed)           0.022     0.178    u_data_memory/p_2_in[13276]
+    SLICE_X42Y160        LUT5 (Prop_D6LUT_SLICEL_I2_O)
+                                                      0.021     0.199 r  u_data_memory/mem[388][4]_i_1/O
+                         net (fo=1, routed)           0.018     0.217    u_data_memory/mem[388][4]_i_1_n_0
+    SLICE_X42Y160        FDRE                                         r  u_data_memory/mem_reg[388][4]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 u_data_memory/mem_reg[1277][3]/C
+                            (rising edge-triggered cell FDRE)
+  Destination:            u_data_memory/mem_reg[1277][3]/D
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.218ns  (logic 0.126ns (57.905%)  route 0.092ns (42.095%))
+  Logic Levels:           3  (FDRE=1 LUT5=2)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X49Y98         FDRE                         0.000     0.000 r  u_data_memory/mem_reg[1277][3]/C
+    SLICE_X49Y98         FDRE (Prop_DFF_SLICEL_C_Q)
+                                                      0.084     0.084 r  u_data_memory/mem_reg[1277][3]/Q
+                         net (fo=6, routed)           0.052     0.136    u_data_memory/mem_reg_n_0_[1277][3]
+    SLICE_X49Y98         LUT5 (Prop_E6LUT_SLICEL_I4_O)
+                                                      0.021     0.157 r  u_data_memory/mem[1277][3]_i_4/O
+                         net (fo=1, routed)           0.022     0.179    u_data_memory/p_3_in[6163]
+    SLICE_X49Y98         LUT5 (Prop_D6LUT_SLICEL_I4_O)
+                                                      0.021     0.200 r  u_data_memory/mem[1277][3]_i_1/O
+                         net (fo=1, routed)           0.018     0.218    u_data_memory/mem[1277][3]_i_1_n_0
+    SLICE_X49Y98         FDRE                                         r  u_data_memory/mem_reg[1277][3]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 u_data_memory/mem_reg[1957][7]/C
+                            (rising edge-triggered cell FDRE)
+  Destination:            u_data_memory/mem_reg[1957][7]/D
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.218ns  (logic 0.126ns (57.905%)  route 0.092ns (42.095%))
+  Logic Levels:           3  (FDRE=1 LUT4=1 LUT5=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X59Y86         FDRE                         0.000     0.000 r  u_data_memory/mem_reg[1957][7]/C
+    SLICE_X59Y86         FDRE (Prop_DFF_SLICEL_C_Q)
+                                                      0.084     0.084 r  u_data_memory/mem_reg[1957][7]/Q
+                         net (fo=6, routed)           0.052     0.136    u_data_memory/mem_reg_n_0_[1957][7]
+    SLICE_X59Y86         LUT4 (Prop_E6LUT_SLICEL_I3_O)
+                                                      0.021     0.157 r  u_data_memory/mem[1957][7]_i_4/O
+                         net (fo=1, routed)           0.022     0.179    u_data_memory/p_3_in[727]
+    SLICE_X59Y86         LUT5 (Prop_D6LUT_SLICEL_I4_O)
+                                                      0.021     0.200 r  u_data_memory/mem[1957][7]_i_1/O
+                         net (fo=1, routed)           0.018     0.218    u_data_memory/mem[1957][7]_i_1_n_0
+    SLICE_X59Y86         FDRE                                         r  u_data_memory/mem_reg[1957][7]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 u_data_memory/mem_reg[1855][6]/C
+                            (rising edge-triggered cell FDRE)
+  Destination:            u_data_memory/mem_reg[1855][6]/D
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.219ns  (logic 0.126ns (57.632%)  route 0.093ns (42.368%))
+  Logic Levels:           3  (FDRE=1 LUT5=2)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X42Y56         FDRE                         0.000     0.000 r  u_data_memory/mem_reg[1855][6]/C
+    SLICE_X42Y56         FDRE (Prop_DFF_SLICEL_C_Q)
+                                                      0.084     0.084 r  u_data_memory/mem_reg[1855][6]/Q
+                         net (fo=6, routed)           0.053     0.137    u_data_memory/mem_reg_n_0_[1855][6]
+    SLICE_X42Y56         LUT5 (Prop_E6LUT_SLICEL_I4_O)
+                                                      0.021     0.158 r  u_data_memory/mem[1855][6]_i_4/O
+                         net (fo=1, routed)           0.022     0.180    u_data_memory/p_3_in[1542]
+    SLICE_X42Y56         LUT5 (Prop_D6LUT_SLICEL_I4_O)
+                                                      0.021     0.201 r  u_data_memory/mem[1855][6]_i_1/O
+                         net (fo=1, routed)           0.018     0.219    u_data_memory/mem[1855][6]_i_1_n_0
+    SLICE_X42Y56         FDRE                                         r  u_data_memory/mem_reg[1855][6]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 u_data_memory/mem_reg[63][5]/C
+                            (rising edge-triggered cell FDRE)
+  Destination:            u_data_memory/mem_reg[63][5]/D
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.219ns  (logic 0.126ns (57.632%)  route 0.093ns (42.368%))
+  Logic Levels:           3  (FDRE=1 LUT5=2)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X11Y102        FDRE                         0.000     0.000 r  u_data_memory/mem_reg[63][5]/C
+    SLICE_X11Y102        FDRE (Prop_DFF_SLICEL_C_Q)
+                                                      0.084     0.084 r  u_data_memory/mem_reg[63][5]/Q
+                         net (fo=6, routed)           0.053     0.137    u_data_memory/mem_reg_n_0_[63][5]
+    SLICE_X11Y102        LUT5 (Prop_E6LUT_SLICEL_I4_O)
+                                                      0.021     0.158 r  u_data_memory/mem[63][5]_i_4/O
+                         net (fo=2, routed)           0.022     0.180    u_data_memory/p_3_in[15877]
+    SLICE_X11Y102        LUT5 (Prop_D6LUT_SLICEL_I4_O)
+                                                      0.021     0.201 r  u_data_memory/mem[63][5]_i_1/O
+                         net (fo=1, routed)           0.018     0.219    u_data_memory/mem[63][5]_i_1_n_0
+    SLICE_X11Y102        FDRE                                         r  u_data_memory/mem_reg[63][5]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 u_data_memory/mem_reg[650][5]/C
+                            (rising edge-triggered cell FDRE)
+  Destination:            u_data_memory/mem_reg[650][5]/D
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.219ns  (logic 0.126ns (57.427%)  route 0.093ns (42.573%))
+  Logic Levels:           3  (FDRE=1 LUT5=2)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X51Y231        FDRE                         0.000     0.000 r  u_data_memory/mem_reg[650][5]/C
+    SLICE_X51Y231        FDRE (Prop_DFF_SLICEL_C_Q)
+                                                      0.084     0.084 r  u_data_memory/mem_reg[650][5]/Q
+                         net (fo=6, routed)           0.052     0.136    u_data_memory/mem_reg_n_0_[650][5]
+    SLICE_X51Y231        LUT5 (Prop_E6LUT_SLICEL_I4_O)
+                                                      0.021     0.157 r  u_data_memory/mem[650][5]_i_3/O
+                         net (fo=2, routed)           0.024     0.180    u_data_memory/p_2_in[11181]
+    SLICE_X51Y231        LUT5 (Prop_D6LUT_SLICEL_I2_O)
+                                                      0.021     0.201 r  u_data_memory/mem[650][5]_i_1/O
+                         net (fo=1, routed)           0.018     0.219    u_data_memory/mem[650][5]_i_1_n_0
+    SLICE_X51Y231        FDRE                                         r  u_data_memory/mem_reg[650][5]/D
+  -------------------------------------------------------------------    -------------------
+
+
+
+
+
