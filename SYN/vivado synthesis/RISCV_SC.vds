@@ -1,0 +1,410 @@
+#-----------------------------------------------------------
+# Vivado v2025.2 (64-bit)
+# SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
+# IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+# SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+# Start of session at: Tue Aug  4 21:21:13 2026
+# Process ID         : 45512
+# Current directory  : D:/vivado projects new/RISCV_SC/RISCV_SC.runs/synth_1
+# Command line       : vivado.exe -log RISCV_SC.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source RISCV_SC.tcl
+# Log file           : D:/vivado projects new/RISCV_SC/RISCV_SC.runs/synth_1/RISCV_SC.vds
+# Journal file       : D:/vivado projects new/RISCV_SC/RISCV_SC.runs/synth_1\vivado.jou
+# Running On         : LAPTOP-OJRLD0H9
+# Platform           : Windows Server 2016 or Windows 10
+# Operating System   : 26200
+# Processor Detail   : 12th Gen Intel(R) Core(TM) i5-12450H
+# CPU Frequency      : 2496 MHz
+# CPU Physical cores : 8
+# CPU Logical cores  : 12
+# Host memory        : 8212 MB
+# Swap memory        : 24625 MB
+# Total Virtual      : 32838 MB
+# Available Virtual  : 9307 MB
+#-----------------------------------------------------------
+source RISCV_SC.tcl -notrace
+create_project: Time (s): cpu = 00:00:17 ; elapsed = 00:00:17 . Memory (MB): peak = 526.883 ; gain = 218.637
+Command: read_checkpoint -auto_incremental -incremental {D:/vivado projects new/RISCV_SC/RISCV_SC.srcs/utils_1/imports/synth_1/RISCV_SC.dcp}
+INFO: [Vivado 12-5825] Read reference checkpoint from D:/vivado projects new/RISCV_SC/RISCV_SC.srcs/utils_1/imports/synth_1/RISCV_SC.dcp for incremental synthesis
+INFO: [Vivado 12-7989] Please ensure there are no constraint changes
+read_checkpoint: Time (s): cpu = 00:00:03 ; elapsed = 00:00:10 . Memory (MB): peak = 532.098 ; gain = 5.215
+Command: synth_design -top RISCV_SC -part xczu5ev-sfvc784-1LV-i -flatten_hierarchy none
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xczu5ev'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xczu5ev'
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 41276
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:08 ; elapsed = 00:00:12 . Memory (MB): peak = 1071.066 ; gain = 533.148
+---------------------------------------------------------------------------------
+INFO: [Synth 8-11241] undeclared symbol 'pc', assumed default net type 'wire' [D:/CoreIC Projects/RISCV_SC/RTL/RISCV_SC_TOP.v:57]
+INFO: [Synth 8-6157] synthesizing module 'RISCV_SC' [D:/CoreIC Projects/RISCV_SC/RTL/RISCV_SC_TOP.v:1]
+INFO: [Synth 8-6157] synthesizing module 'fetch_unit_top' [D:/CoreIC Projects/RISCV_SC/RTL/fetch_unit_top.v:1]
+INFO: [Synth 8-6157] synthesizing module 'pc' [D:/CoreIC Projects/RISCV_SC/RTL/pc.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'pc' (0#1) [D:/CoreIC Projects/RISCV_SC/RTL/pc.v:1]
+INFO: [Synth 8-6157] synthesizing module 'pc_plus4' [D:/CoreIC Projects/RISCV_SC/RTL/pc_plus4.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'pc_plus4' (0#1) [D:/CoreIC Projects/RISCV_SC/RTL/pc_plus4.v:1]
+INFO: [Synth 8-6157] synthesizing module 'pc_mux' [D:/CoreIC Projects/RISCV_SC/RTL/pc_mux.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'pc_mux' (0#1) [D:/CoreIC Projects/RISCV_SC/RTL/pc_mux.v:1]
+INFO: [Synth 8-6157] synthesizing module 'instruction_memory' [D:/CoreIC Projects/RISCV_SC/RTL/instruction_memory.v:1]
+INFO: [Synth 8-3876] $readmem data file 'program_all37.mem' is read successfully [D:/CoreIC Projects/RISCV_SC/RTL/instruction_memory.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'instruction_memory' (0#1) [D:/CoreIC Projects/RISCV_SC/RTL/instruction_memory.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'fetch_unit_top' (0#1) [D:/CoreIC Projects/RISCV_SC/RTL/fetch_unit_top.v:1]
+WARNING: [Synth 8-689] width (1) of port connection 'pc' does not match port width (32) of module 'fetch_unit_top' [D:/CoreIC Projects/RISCV_SC/RTL/RISCV_SC_TOP.v:57]
+INFO: [Synth 8-6157] synthesizing module 'decode_top' [D:/CoreIC Projects/RISCV_SC/RTL/decode_top.v:1]
+INFO: [Synth 8-6157] synthesizing module 'register_file' [D:/CoreIC Projects/RISCV_SC/RTL/register_file.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'register_file' (0#1) [D:/CoreIC Projects/RISCV_SC/RTL/register_file.v:1]
+INFO: [Synth 8-6157] synthesizing module 'imm_gen' [D:/CoreIC Projects/RISCV_SC/RTL/imm_gen.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'imm_gen' (0#1) [D:/CoreIC Projects/RISCV_SC/RTL/imm_gen.v:1]
+INFO: [Synth 8-6157] synthesizing module 'control_unit_top' [D:/CoreIC Projects/RISCV_SC/RTL/control_unit_top.v:1]
+INFO: [Synth 8-6157] synthesizing module 'main_decoder' [D:/CoreIC Projects/RISCV_SC/RTL/main_decoder.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'main_decoder' (0#1) [D:/CoreIC Projects/RISCV_SC/RTL/main_decoder.v:1]
+INFO: [Synth 8-6157] synthesizing module 'alu_decoder' [D:/CoreIC Projects/RISCV_SC/RTL/alu_decoder.v:1]
+INFO: [Synth 8-226] default block is never used [D:/CoreIC Projects/RISCV_SC/RTL/alu_decoder.v:34]
+INFO: [Synth 8-226] default block is never used [D:/CoreIC Projects/RISCV_SC/RTL/alu_decoder.v:52]
+INFO: [Synth 8-6155] done synthesizing module 'alu_decoder' (0#1) [D:/CoreIC Projects/RISCV_SC/RTL/alu_decoder.v:1]
+INFO: [Synth 8-6157] synthesizing module 'branch_decision' [D:/CoreIC Projects/RISCV_SC/RTL/branch_decision.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'branch_decision' (0#1) [D:/CoreIC Projects/RISCV_SC/RTL/branch_decision.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'control_unit_top' (0#1) [D:/CoreIC Projects/RISCV_SC/RTL/control_unit_top.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'decode_top' (0#1) [D:/CoreIC Projects/RISCV_SC/RTL/decode_top.v:1]
+INFO: [Synth 8-6157] synthesizing module 'comparator' [D:/CoreIC Projects/RISCV_SC/RTL/comparator.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'comparator' (0#1) [D:/CoreIC Projects/RISCV_SC/RTL/comparator.v:1]
+INFO: [Synth 8-6157] synthesizing module 'execute_top' [D:/CoreIC Projects/RISCV_SC/RTL/execute_top.v:1]
+INFO: [Synth 8-6157] synthesizing module 'srcA_mux' [D:/CoreIC Projects/RISCV_SC/RTL/srcA_mux.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'srcA_mux' (0#1) [D:/CoreIC Projects/RISCV_SC/RTL/srcA_mux.v:1]
+INFO: [Synth 8-6157] synthesizing module 'srcB_mux' [D:/CoreIC Projects/RISCV_SC/RTL/srcB_mux.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'srcB_mux' (0#1) [D:/CoreIC Projects/RISCV_SC/RTL/srcB_mux.v:1]
+INFO: [Synth 8-6157] synthesizing module 'alu' [D:/CoreIC Projects/RISCV_SC/RTL/alu.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'alu' (0#1) [D:/CoreIC Projects/RISCV_SC/RTL/alu.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'execute_top' (0#1) [D:/CoreIC Projects/RISCV_SC/RTL/execute_top.v:1]
+WARNING: [Synth 8-689] width (1) of port connection 'PC' does not match port width (32) of module 'execute_top' [D:/CoreIC Projects/RISCV_SC/RTL/RISCV_SC_TOP.v:97]
+INFO: [Synth 8-6157] synthesizing module 'data_memory' [D:/CoreIC Projects/RISCV_SC/RTL/data_memory.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'data_memory' (0#1) [D:/CoreIC Projects/RISCV_SC/RTL/data_memory.v:1]
+INFO: [Synth 8-6157] synthesizing module 'result_mux' [D:/CoreIC Projects/RISCV_SC/RTL/result_mux.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'result_mux' (0#1) [D:/CoreIC Projects/RISCV_SC/RTL/result_mux.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'RISCV_SC' (0#1) [D:/CoreIC Projects/RISCV_SC/RTL/RISCV_SC_TOP.v:1]
+WARNING: [Synth 8-4767] Trying to implement RAM 'mem_reg' in registers. Block RAM or DRAM implementation is not possible; see log for reasons. [D:/CoreIC Projects/RISCV_SC/RTL/data_memory.v:42]
+Reason is one or more of the following :
+	1: RAM has multiple writes via different ports in same process. If RAM inferencing intended, write to one port per process. 
+	2: Invalid write to RAM. 
+	3: RAM has multiple writes via different ports in same process. If RAM inferencing intended, write to one port per process. 
+	4: Invalid write to RAM. 
+	5: RAM has multiple writes via different ports in same process. If RAM inferencing intended, write to one port per process. 
+	6: Invalid write to RAM. 
+	7: Invalid write to RAM. 
+	8: No valid clock found for write to RAM. 
+WARNING: [Synth 8-13159] Potential Runtime issue for RAM 'mem_reg' since this is dissolved into (16384) registers bits. Consider modifying RTL as per supported RAM templates
+WARNING: [Synth 8-3917] design RISCV_SC has port pc_out[31] driven by constant 0
+WARNING: [Synth 8-3917] design RISCV_SC has port pc_out[30] driven by constant 0
+WARNING: [Synth 8-3917] design RISCV_SC has port pc_out[29] driven by constant 0
+WARNING: [Synth 8-3917] design RISCV_SC has port pc_out[28] driven by constant 0
+WARNING: [Synth 8-3917] design RISCV_SC has port pc_out[27] driven by constant 0
+WARNING: [Synth 8-3917] design RISCV_SC has port pc_out[26] driven by constant 0
+WARNING: [Synth 8-3917] design RISCV_SC has port pc_out[25] driven by constant 0
+WARNING: [Synth 8-3917] design RISCV_SC has port pc_out[24] driven by constant 0
+WARNING: [Synth 8-3917] design RISCV_SC has port pc_out[23] driven by constant 0
+WARNING: [Synth 8-3917] design RISCV_SC has port pc_out[22] driven by constant 0
+WARNING: [Synth 8-3917] design RISCV_SC has port pc_out[21] driven by constant 0
+WARNING: [Synth 8-3917] design RISCV_SC has port pc_out[20] driven by constant 0
+WARNING: [Synth 8-3917] design RISCV_SC has port pc_out[19] driven by constant 0
+WARNING: [Synth 8-3917] design RISCV_SC has port pc_out[18] driven by constant 0
+WARNING: [Synth 8-3917] design RISCV_SC has port pc_out[17] driven by constant 0
+WARNING: [Synth 8-3917] design RISCV_SC has port pc_out[16] driven by constant 0
+WARNING: [Synth 8-3917] design RISCV_SC has port pc_out[15] driven by constant 0
+WARNING: [Synth 8-3917] design RISCV_SC has port pc_out[14] driven by constant 0
+WARNING: [Synth 8-3917] design RISCV_SC has port pc_out[13] driven by constant 0
+WARNING: [Synth 8-3917] design RISCV_SC has port pc_out[12] driven by constant 0
+WARNING: [Synth 8-3917] design RISCV_SC has port pc_out[11] driven by constant 0
+WARNING: [Synth 8-3917] design RISCV_SC has port pc_out[10] driven by constant 0
+WARNING: [Synth 8-3917] design RISCV_SC has port pc_out[9] driven by constant 0
+WARNING: [Synth 8-3917] design RISCV_SC has port pc_out[8] driven by constant 0
+WARNING: [Synth 8-3917] design RISCV_SC has port pc_out[7] driven by constant 0
+WARNING: [Synth 8-3917] design RISCV_SC has port pc_out[6] driven by constant 0
+WARNING: [Synth 8-3917] design RISCV_SC has port pc_out[5] driven by constant 0
+WARNING: [Synth 8-3917] design RISCV_SC has port pc_out[4] driven by constant 0
+WARNING: [Synth 8-3917] design RISCV_SC has port pc_out[3] driven by constant 0
+WARNING: [Synth 8-3917] design RISCV_SC has port pc_out[2] driven by constant 0
+WARNING: [Synth 8-3917] design RISCV_SC has port pc_out[1] driven by constant 0
+WARNING: [Synth 8-7129] Port address[31] in module data_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port address[30] in module data_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port address[29] in module data_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port address[28] in module data_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port address[27] in module data_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port address[26] in module data_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port address[25] in module data_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port address[24] in module data_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port address[23] in module data_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port address[22] in module data_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port address[21] in module data_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port address[20] in module data_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port address[19] in module data_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port address[18] in module data_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port address[17] in module data_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port address[16] in module data_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port address[15] in module data_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port address[14] in module data_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port address[13] in module data_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port address[12] in module data_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port address[11] in module data_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port instruction[6] in module imm_gen is either unconnected or has no load
+WARNING: [Synth 8-7129] Port instruction[5] in module imm_gen is either unconnected or has no load
+WARNING: [Synth 8-7129] Port instruction[4] in module imm_gen is either unconnected or has no load
+WARNING: [Synth 8-7129] Port instruction[3] in module imm_gen is either unconnected or has no load
+WARNING: [Synth 8-7129] Port instruction[2] in module imm_gen is either unconnected or has no load
+WARNING: [Synth 8-7129] Port instruction[1] in module imm_gen is either unconnected or has no load
+WARNING: [Synth 8-7129] Port instruction[0] in module imm_gen is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[1] in module instruction_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[0] in module instruction_memory is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:21 ; elapsed = 00:00:26 . Memory (MB): peak = 1510.066 ; gain = 972.148
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:25 ; elapsed = 00:00:30 . Memory (MB): peak = 1510.066 ; gain = 972.148
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xczu5ev-sfvc784-1LV-i
+INFO: [Synth 8-6742] Reading net delay rules and data
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xczu5ev-sfvc784-1LV-i
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:25 ; elapsed = 00:00:30 . Memory (MB): peak = 1510.066 ; gain = 972.148
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Preparing Guide Design
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-6702] IncrSynth : Design change found in an area of the design that prevents previous synthesis information being used, Reverting to default synthesis
+---------------------------------------------------------------------------------
+Finished Doing Graph Differ : Time (s): cpu = 00:00:37 ; elapsed = 00:00:39 . Memory (MB): peak = 2646.887 ; gain = 2108.969
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Preparing Guide Design : Time (s): cpu = 00:00:37 ; elapsed = 00:00:39 . Memory (MB): peak = 2646.887 ; gain = 2108.969
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:02:53 ; elapsed = 00:03:14 . Memory (MB): peak = 2646.887 ; gain = 2108.969
+---------------------------------------------------------------------------------
+
+
+Incremental Synthesis Report Summary:
+
+1. Incremental synthesis run: no
+
+   Reason for not running incremental synthesis : Design change found in an area of the design that prevents previous synthesis information being used
+
+
+INFO: [Synth 8-7130] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+No constraint files found.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   32 Bit       Adders := 2     
+	   3 Input   32 Bit       Adders := 1     
++---XORs : 
+	   2 Input     32 Bit         XORs := 1     
++---Registers : 
+	               32 Bit    Registers := 33    
+	                8 Bit    Registers := 2048  
++---Muxes : 
+	   2 Input   32 Bit        Muxes := 3     
+	  63 Input   32 Bit        Muxes := 1     
+	   4 Input   32 Bit        Muxes := 1     
+	   2 Input    8 Bit        Muxes := 3070  
+	   3 Input    8 Bit        Muxes := 768   
+	   4 Input    4 Bit        Muxes := 1     
+	   8 Input    4 Bit        Muxes := 1     
+	   2 Input    3 Bit        Muxes := 1     
+	   5 Input    1 Bit        Muxes := 1     
+	   2 Input    1 Bit        Muxes := 31    
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 1248 (col length:96)
+BRAMs: 288 (col length: RAMB18 96 RAMB36 48)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-3917] design RISCV_SC has port pc_out[31] driven by constant 0
+WARNING: [Synth 8-3917] design RISCV_SC has port pc_out[30] driven by constant 0
+WARNING: [Synth 8-3917] design RISCV_SC has port pc_out[29] driven by constant 0
+WARNING: [Synth 8-3917] design RISCV_SC has port pc_out[28] driven by constant 0
+WARNING: [Synth 8-3917] design RISCV_SC has port pc_out[27] driven by constant 0
+WARNING: [Synth 8-3917] design RISCV_SC has port pc_out[26] driven by constant 0
+WARNING: [Synth 8-3917] design RISCV_SC has port pc_out[25] driven by constant 0
+WARNING: [Synth 8-3917] design RISCV_SC has port pc_out[24] driven by constant 0
+WARNING: [Synth 8-3917] design RISCV_SC has port pc_out[23] driven by constant 0
+WARNING: [Synth 8-3917] design RISCV_SC has port pc_out[22] driven by constant 0
+WARNING: [Synth 8-3917] design RISCV_SC has port pc_out[21] driven by constant 0
+WARNING: [Synth 8-3917] design RISCV_SC has port pc_out[20] driven by constant 0
+WARNING: [Synth 8-3917] design RISCV_SC has port pc_out[19] driven by constant 0
+WARNING: [Synth 8-3917] design RISCV_SC has port pc_out[18] driven by constant 0
+WARNING: [Synth 8-3917] design RISCV_SC has port pc_out[17] driven by constant 0
+WARNING: [Synth 8-3917] design RISCV_SC has port pc_out[16] driven by constant 0
+WARNING: [Synth 8-3917] design RISCV_SC has port pc_out[15] driven by constant 0
+WARNING: [Synth 8-3917] design RISCV_SC has port pc_out[14] driven by constant 0
+WARNING: [Synth 8-3917] design RISCV_SC has port pc_out[13] driven by constant 0
+WARNING: [Synth 8-3917] design RISCV_SC has port pc_out[12] driven by constant 0
+WARNING: [Synth 8-3917] design RISCV_SC has port pc_out[11] driven by constant 0
+WARNING: [Synth 8-3917] design RISCV_SC has port pc_out[10] driven by constant 0
+WARNING: [Synth 8-3917] design RISCV_SC has port pc_out[9] driven by constant 0
+WARNING: [Synth 8-3917] design RISCV_SC has port pc_out[8] driven by constant 0
+WARNING: [Synth 8-3917] design RISCV_SC has port pc_out[7] driven by constant 0
+WARNING: [Synth 8-3917] design RISCV_SC has port pc_out[6] driven by constant 0
+WARNING: [Synth 8-3917] design RISCV_SC has port pc_out[5] driven by constant 0
+WARNING: [Synth 8-3917] design RISCV_SC has port pc_out[4] driven by constant 0
+WARNING: [Synth 8-3917] design RISCV_SC has port pc_out[3] driven by constant 0
+WARNING: [Synth 8-3917] design RISCV_SC has port pc_out[2] driven by constant 0
+WARNING: [Synth 8-3917] design RISCV_SC has port pc_out[1] driven by constant 0
+WARNING: [Synth 8-7129] Port address[31] in module data_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port address[30] in module data_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port address[29] in module data_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port address[28] in module data_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port address[27] in module data_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port address[26] in module data_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port address[25] in module data_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port address[24] in module data_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port address[23] in module data_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port address[22] in module data_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port address[21] in module data_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port address[20] in module data_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port address[19] in module data_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port address[18] in module data_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port address[17] in module data_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port address[16] in module data_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port address[15] in module data_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port address[14] in module data_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port address[13] in module data_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port address[12] in module data_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port address[11] in module data_memory is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:05:39 ; elapsed = 00:06:36 . Memory (MB): peak = 2646.887 ; gain = 2108.969
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:05:44 ; elapsed = 00:06:44 . Memory (MB): peak = 2646.887 ; gain = 2108.969
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:06:09 ; elapsed = 00:07:30 . Memory (MB): peak = 2646.887 ; gain = 2108.969
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:06:30 ; elapsed = 00:07:58 . Memory (MB): peak = 2647.605 ; gain = 2109.688
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:06:31 ; elapsed = 00:07:59 . Memory (MB): peak = 2647.605 ; gain = 2109.688
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:06:36 ; elapsed = 00:08:05 . Memory (MB): peak = 2657.012 ; gain = 2119.094
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |BUFG   |     1|
+|2     |CARRY8 |    22|
+|3     |LUT1   |     1|
+|4     |LUT2   |   595|
+|5     |LUT3   | 16010|
+|6     |LUT4   |  3026|
+|7     |LUT5   | 40452|
+|8     |LUT6   | 32043|
+|9     |MUXF7  |  8939|
+|10    |MUXF8  |  4384|
+|11    |FDRE   | 16896|
+|12    |IBUF   |     2|
+|13    |OBUF   |   192|
++------+-------+------+
+
+Report Instance Areas: 
++------+-------------------------+-------------------+-------+
+|      |Instance                 |Module             |Cells  |
++------+-------------------------+-------------------+-------+
+|1     |top                      |                   | 122563|
+|2     |  u_data_memory          |data_memory        | 120440|
+|3     |  u_fetch_unit_top       |fetch_unit_top     |     97|
+|4     |    u_pc                 |pc                 |     32|
+|5     |    u_pc_plus4           |pc_plus4           |      5|
+|6     |    u_pc_mux             |pc_mux             |     32|
+|7     |    u_instruction_memory |instruction_memory |     28|
+|8     |  u_decode_top           |decode_top         |   1123|
+|9     |    u_register_file      |register_file      |   1071|
+|10    |    u_imm_gen            |imm_gen            |     32|
+|11    |    u_control_unit       |control_unit_top   |     20|
+|12    |      u_main_decoder     |main_decoder       |     12|
+|13    |      u_alu_decoder      |alu_decoder        |      5|
+|14    |      u_branch_decision  |branch_decision    |      2|
+|15    |  u_comparator           |comparator         |     81|
+|16    |  u_execute_top          |execute_top        |    595|
+|17    |    u_srcA_mux           |srcA_mux           |     32|
+|18    |    u_srcB_mux           |srcB_mux           |     32|
+|19    |    u_alu                |alu                |    531|
+|20    |  u_result_mux           |result_mux         |     32|
++------+-------------------------+-------------------+-------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:06:36 ; elapsed = 00:08:05 . Memory (MB): peak = 2657.012 ; gain = 2119.094
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 118 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:06:36 ; elapsed = 00:08:15 . Memory (MB): peak = 2657.012 ; gain = 2119.094
+Synthesis Optimization Complete : Time (s): cpu = 00:06:36 ; elapsed = 00:08:15 . Memory (MB): peak = 2657.012 ; gain = 2119.094
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 2765.047 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 13348 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 1 CPU seconds
+WARNING: [Netlist 29-101] Netlist 'RISCV_SC' is not ideal for floorplanning, since the cellview 'data_memory' contains a large number of primitives.  Please consider enabling hierarchy in synthesis if you want to do floorplanning.
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.093 . Memory (MB): peak = 2854.750 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 3 instances were transformed.
+  BUFG => BUFGCE: 1 instance 
+  IBUF => IBUF (IBUFCTRL, INBUF): 2 instances
+
+Synth Design complete | Checksum: 5fc285cd
+INFO: [Common 17-83] Releasing license: Synthesis
+60 Infos, 119 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:07:18 ; elapsed = 00:09:07 . Memory (MB): peak = 2854.750 ; gain = 2322.652
+Write ShapeDB Complete: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.374 . Memory (MB): peak = 2854.750 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'D:/vivado projects new/RISCV_SC/RISCV_SC.runs/synth_1/RISCV_SC.dcp' has been generated.
+write_checkpoint: Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 2854.750 ; gain = 0.000
+INFO: [Vivado 12-24828] Executing command : report_utilization -file RISCV_SC_utilization_synth.rpt -pb RISCV_SC_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Tue Aug  4 21:31:31 2026...
